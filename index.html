@@ -1,0 +1,354 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Shop Sale</title>
+    <link href="css/jquery.bxslider.css" rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css">
+	<link rel="stylesheet" href="assets/owl.carousel.min.css">
+	<link rel="stylesheet" href="assets/owl.theme.default.min.css">
+    <link rel="stylesheet" href="fonts/fontawesome-free-5.13.0-web/css/all.min.css">
+    <script src="js/jquery.min.js"></script>
+    <script src="js/jquery.bxslider.min.js"></script>
+    <script src="until.js"></script>    
+    <script src="sanPham.js"></script>
+    <script src="gioHang.js"></script>
+    <script src="formValidation.js"></script>
+    <link rel="stylesheet" href="css/styles.css">
+	 <script>
+    	$(document).ready(function(){
+      	$('.slider').bxSlider({
+      		mode: 'fade',
+      		dots: false,
+      		speed: 700,
+      		auto: true,
+      		nav: false,
+      		pause: 2000,
+      		autoHover: true,
+      	});
+    });
+  	</script>
+</head>
+<body>
+    <header id="header">
+        <div id="noidung-header">
+            <nav class="navbartren">
+                <ul class="noidung-navbar-tren-trai">
+                    <li class="nd1 hiennd phancachchedoc">
+                        <a href="#">Tải ứng dụng</a>
+                        <div class="qrcode">
+                            <img src="images/f184c0b68a2d385feb5d70a76396230b.png" alt="QR Code" class="qrcode_qr">
+                            <div class="qrcode_ap">
+                                <a href="#" class="qrcode_ap_link"><img src="images/2679f513b5f9e235adf2c6c288617e7b.png" alt="Google Play"></a>
+                                <a href="#" class="qrcode_ap_link"><img src="images/759416b55e2bd69ecc360ee2faab7ad0.png" alt="App Store"></a>
+                            </div>
+                        </div>
+                    </li>
+                    <li class="nd1">
+                        <a href="#">Kết nối</a>
+                        <a href="#"><i class="fab fa-facebook"></i></a>
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                    </li>
+                </ul>
+                <ul class="noidung-navbar-tren-trai">
+                    <li class="nd1 hiennd">
+                        <a href="#"><i class="fas fa-bell"></i>Thông báo</a>
+                        <div class="thongbao">
+                            <img class="thongbao-hinhanh" src="images/5a83ec8ec1bc1ea687fdf9c6e68eee0b.png" alt="">
+                            <div class="nhacnho">Đăng nhập để xem thông báo</div>
+                            <div class="dangki">
+                                <a href="#">Đăng ký</a>
+                            </div>
+                            <div class="dangnhap">
+                                <a href="#">Đăng nhập</a>
+                            </div>
+                        </div>
+                    </li>                    
+                    <li class="nd1">
+                        <a href="#"><i class="far fa-question-circle"></i>Trợ giúp</a>
+                    </li>
+                    <li class="nd1 phancachchedoc"><a href="#">Đăng ký</a></li>
+                    <li class="nd1"><a href="Them_moi_san_pham.html" target="blank">Đăng nhập</a></li>
+                </ul>
+            </nav>
+            <div class="header-logo">
+                <a href="index.html"><img src="images/pinterest_board_photo.png" alt=""></a>
+            </div>  
+            <div class="header-giua">
+                <div class="menu">
+                    <nav id="nav-bar">
+                        <ul class="menu-lv1">
+                            <li class="item-lv1">
+                                <a href="index.html" class="item-lv1-title">TRANG CHỦ</a>
+                            </li>
+                            <li class="item-lv1">
+                                <a href="#" class="item-lv1-title">SẢN PHẨM</a>
+                                <ul class="menu-lv2">
+                                    <li class="item-lv2">
+                                        <a href="#" class="item-lv2-title">NOKIA</a>
+                                    </li>
+                                    <li class="item-lv2">
+                                        <a href="#" class="item-lv2-title">SAMSUNG</a>
+                                    </li>
+                                    <li class="item-lv2">
+                                        <a href="#" class="item-lv2-title">APPLE</a>
+                                    </li>
+                                    <li class="item-lv2">
+                                        <a href="#" class="item-lv2-title">HUAWEI</a>
+                                    </li>
+                                    <li class="item-lv2">
+                                        <a href="#" class="item-lv2-title">LG</a>
+                                    </li>
+                                    <li class="item-lv2">
+                                        <a href="#" class="item-lv2-title">SONY</a>
+                                    </li>
+                                </ul>
+                            </li>
+                            <li class="item-lv1">
+                                <a href="#" class="item-lv1-title">PHỤ KIỆN</a>
+                                <ul class="menu-lv2">
+                                    <li class="item-lv2">
+                                        <a href="#" class="item-lv2-title">Điện thoại</a>
+                                    </li>
+                                    <li class="item-lv2">
+                                        <a href="#" class="item-lv2-title">Đồ gia dụng</a>
+                                    </li>
+                                </ul>
+                            </li>
+                            <li class="item-lv1">
+                                <a href="index.html" class="item-lv1-title">TUYỂN DỤNG</a>
+                            </li>
+                            <li class="item-lv1">
+                                <a href="#" class="item-lv1-title">KHUYỄN MÃI</a>
+                                <ul class="menu-lv2">
+                                    <li class="item-lv2">
+                                        <a href="#" class="item-lv2-title">NOKIA</a>
+                                    </li>
+                                    <li class="item-lv2">
+                                        <a href="#" class="item-lv2-title">SAMSUNG</a>
+                                    </li>
+                                    <li class="item-lv2">
+                                        <a href="#" class="item-lv2-title">APPLE</a>
+                                    </li>
+                                    <li class="item-lv2">
+                                        <a href="#" class="item-lv2-title">HUAWEI</a>
+                                    </li>
+                                    <li class="item-lv2">
+                                        <a href="#" class="item-lv2-title">LG</a>
+                                    </li>
+                                    <li class="item-lv2">
+                                        <a href="#" class="item-lv2-title">SONY</a>
+                                    </li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </nav>
+                </div>
+                
+                <div class="timkiem">
+                    
+                    <input notnull oninput="Onvaluechange()" type="text" class="noidung-timkiem" placeholder="Tìm kiếm trong Shop">
+                    <label for="noidung-timkiem" class="error"></label>
+                    <div class="timkiemtrong-select">
+                        <span class="label">Trong Shop</span>
+                        <i class="fas fa-angle-down"></i>
+                        <ul class="timkiem-option">
+                            <li class="timkiemitem">
+                                <span>Trong Shop</span>
+                                <i class="fas fa-check"></i>
+                            </li>
+                            <li class="timkiemitem">
+                                <span>Ngoài Shop</span>
+                            </li>
+                        </ul>
+                    </div>
+                    <button class="btn-timkiem">
+                        <i class="btn-timkiemlg fas fa-search"></i>
+                    </button>
+                </div>   
+            </div>  
+            <div class="header-muahang">
+                <a href="gioHang.html"><i class="fas fa-cart-arrow-down"></i></a>
+            </div> 
+        </div>  
+    </header>
+    <div class="slider">
+        <div><a href="#"><img src="images/9e3321964e6de4f64f6caadaefc0c174.jpg" width="100%" height="400"></a></div>
+        <div><a href="#"><img src="https://cf.shopee.vn/file/3310b6565ed646a2d65559f55fee15ed" width="100%" height="400"></a></div>
+        <div><a href="#"><img src="https://cf.shopee.vn/file/82b8118bc95f333c0aa43d9cc5424b9a" width="100%" height="400"></a></div>	
+    </div>
+    <main id="main">
+        <div id="danh-muc">
+            <div class="tieude">
+                <h2><i class="fas fa-list-ul"></i>DANH MỤC</h2>
+            </div>
+            <div class="menudanhmuc">
+                <div class="itm1">
+                    <li class="item-danhmuc"><a href="#"><i class="fas fa-check"></i>Tất cả sản phẩm</a></li>
+                </div>
+                <div class="itm1">
+                    <li class="item-danhmuc2"><a href="#">Điện thoại Nokia</a></li>                    
+                </div>
+                <div class="itm1">
+                    <li class="item-danhmuc2"><a href="#">Điện thoại Apple</a></li>                    
+                </div>
+                <div class="itm1">
+                    <li class="item-danhmuc2"><a href="#">Điện thoại SamSung</a></li>                    
+                </div>
+                <div class="itm1">
+                    <li class="item-danhmuc2"><a href="#">Điện thoại LG</a></li>                    
+                </div>
+                <div class="itm1">
+                    <li class="item-danhmuc2"><a href="#">Điện thoại Huawei</a></li>                    
+                </div>
+                <div class="itm1">
+                    <li class="item-danhmuc2"><a href="#">Điện thoại Sony</a></li>                    
+                </div>
+            </div>
+        </div>
+        <div class="khungphan-sanpham">
+            <div class="khungloc-sanpham">
+                <span class="label">Sắp xếp theo</span>
+                <button class="nbtnn htbl">Phổ biến</button>
+                <button class="nbtnn htbl active">Mới nhất</button>
+                <button class="nbtnn htbl">Bán chạy</button>
+
+                <div class="select-input">
+                    <span class="select-input_label">Giá</span>
+                    <i class="select-input_icon fas fa-angle-down"></i>
+                    <ul class="select-input_list">
+                        <li class="select-input_item">
+                            <a class="select-input_link" href="#">Sắp xếp lộn xộn</a>
+                        </li>
+                        <li class="select-input_item">    
+                            <a class="select-input_link" href="#">Giá Cao đến thấp</a>
+                        </li>
+                        <li class="select-input_item">
+                            <a class="select-input_link" href="#">Giá Thấp đến cao</a>
+                        </li>
+                    </ul>
+                </div>
+                <div class="hom-filter_page">
+                    <span class="hom-filter_page-num">
+                        <span class="tranghtai">1</span>/15
+                    </span>
+                    <div class="control">
+                        <a href="#" class="nutdieuhuong"><i class="page-icon fas fa-angle-left"></i></a>
+                        <a href="#" class="nutdieuhuong"><i class="page-icon fas fa-angle-right"></i></a>
+                    </div>
+                </div>
+            </div>            
+            <div id="products">
+                    <!--Hiển thị danh sách sản phẩm-->
+                <div class="items">
+                    <div class="item">
+                        <div class="item-hinhAnh">
+                            <img src="https://cdn.tgdd.vn/Products/Images/42/60546/iphone-5s-16gb-7-400x460.png" alt="">
+                        </div>
+                        <h2 class="item-ten">Iphone 5</h2>
+                        <div class="item-gia">
+                            <span class="item-gia-goc">5000000 đ</span>
+                            <span class="item-gia-ban">4000000 đ</span>
+                        </div>
+                        <button class="btn btn-primary">Thêm vào giỏ hàng</button>
+                    </div>
+                    <div class="item">
+                        <div class="item-hinhAnh">
+                            <img src="https://cdn.tgdd.vn/Products/Images/42/60546/iphone-5s-16gb-7-400x460.png" alt="">
+                        </div>
+                        <h2 class="item-ten">Iphone 5</h2>
+                        <div class="item-gia">
+                            <span class="item-gia-goc">5000000 đ</span>
+                            <span class="item-gia-ban">4000000 đ</span>
+                        </div>
+                        <button class="btn btn-primary">Thêm vào giỏ hàng</button>
+                    </div>
+                    <div class="item">
+                        <div class="item-hinhAnh">
+                            <img src="https://cdn.tgdd.vn/Products/Images/42/60546/iphone-5s-16gb-7-400x460.png" alt="">
+                        </div>
+                        <h2 class="item-ten">Iphone 5</h2>
+                        <div class="item-gia">
+                            <span class="item-gia-goc">5000000 đ</span>
+                            <span class="item-gia-ban">4000000 đ</span>
+                        </div>
+                        <button class="btn btn-primary">Thêm vào giỏ hàng</button>
+                    </div>
+                    <div class="item">
+                        <div class="item-hinhAnh">
+                            <img src="https://cdn.tgdd.vn/Products/Images/42/60546/iphone-5s-16gb-7-400x460.png" alt="">
+                        </div>
+                        <h2 class="item-ten">Iphone 5</h2>
+                        <div class="item-gia">
+                            <span class="item-gia-goc">5000000 đ</span>
+                            <span class="item-gia-ban">4000000 đ</span>
+                        </div>
+                        <button class="btn btn-primary">Thêm vào giỏ hàng</button>
+                    </div>
+                </div>
+            </div>            
+        </div>        
+    </main>
+    <footer id="footer">
+
+    </footer>
+
+    <script>
+        $(document).ready(function () {
+            $('.item-lv1 li').hover(function () {
+                $('>ul.item-lv1:not(:animated)', this).slideDown(300);
+
+            }, function () {
+                $('>ul.menu-lv2', this).slideUp(150);
+            }
+            );
+        });
+    </script>
+    <script>
+        /*b1. Lấy danh sách dưới LCS*/
+        var jsonDanhSachSanPham = localStorage.getItem('danhSachSanPham');
+        var danhSachSanPham = taoDoiTuongSanPham().fromJSONs(jsonDanhSachSanPham);
+        console.log(danhSachSanPham);
+        
+
+        /*b2. CHUYỂN danh sách đối tượng thành đoạn html*/
+        var HTML = chuyenDanhSachDoiTuongSanPhamThanhHTML(danhSachSanPham);
+
+        /*b3. gắn sản phẩm vào products*/
+        var nodeProducts = document.getElementById('products');
+        nodeProducts.innerHTML = HTML;
+
+        function onClickThemVaoGioHang(idSanPham){
+            alert('Thêm vào giỏ hàng sản phẩm có ID '+idSanPham+' thành công!');
+
+            /*Logic đưa vào giỏ hàng*/
+            /*B1: Phân tích csdl hiện có trong giỏ hàng là gì
+                Danh sách các đối tượng là item giỏ hàng
+                item giỏ hàng là gi:
+                    id sản phẩm
+                    số lượng sản phẩm*/
+
+            /*Bước 2: xây dựng hàm tạo nhanh đối tượng item giỏ hàng*/
+            /*Bước 3: Lấy danh sách gỏ hàng có trong LCS lên .... để lấy toàn bộ item giỏ hàng*/
+            var danhSachItemGioHang = layDanhSachItemGioHang();
+            /*thêm item vào giỏ*/
+            var coTonTaiTrongDanhSachItemGioHang = false;
+            for(var i=0; i<danhSachItemGioHang.length; i++){
+                var itemGioHangHienTai = danhSachItemGioHang[i];
+                /*nếu tồn tại tăng số luowmgj item lên*/
+                if(itemGioHangHienTai.idSanPham == idSanPham){
+                    danhSachItemGioHang[i].soLuong ++;
+                    coTonTaiTrongDanhSachItemGioHang = true;
+                }
+            }
+            if(coTonTaiTrongDanhSachItemGioHang == false){
+                var itemGioHang = taoDoiTuongItemGioHang(idSanPham,1);
+                danhSachItemGioHang.push(itemGioHang);
+            }
+            /*b5. lưu lại lcs*/
+            luuDanhSachItemGioHangVaoLCS(danhSachItemGioHang);
+        }
+    </script>
+</body>
+</html>

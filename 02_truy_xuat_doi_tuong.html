@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dựa vào id lấy lên nội dung đối tượng</title>
+    <script src="until.js"></script>
+    <script src="sanPham.js"></script>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <input type="text" id="idSanPham" placeholder="Nhập ID sản phẩm">
+    <button class="btn" onclick="onClickTimKiemSanPham()">Tìm kiếm</button>
+    <div id="ketQuaTimKiem">
+        <!--hienr thị sản phẩm-->
+    </div>
+    <script>
+        function onClickTimKiemSanPham(){
+            /*tuy xuất node để kiếm sp*/
+            var nodeIdSanPham = document.getElementById('idSanPham');
+            var idSanPham = nodeIdSanPham.value;
+            console.log('Id sản phẩm là: '+idSanPham);
+            /*b2 truy xuát theo id*/
+            var sanPham = laySanPhamTrongLCSTheoId(idSanPham);
+            console.log(sanPham);
+            /*b3. chuyển đt sang html*/
+            var HTML = chuyenDoiTuongSanPhamThanhHTML(sanPham);
+            /*b4. hiển thị html*/
+            var nodeKetQuaTimKiem = document.getElementById('ketQuaTimKiem');
+            nodeKetQuaTimKiem.innerHTML = HTML;
+        }
+    </script>
+</body>
+</html>

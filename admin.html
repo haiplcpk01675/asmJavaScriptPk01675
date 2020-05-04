@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Thêm mới sản phẩm</title>
+    <script src="until.js"></script>
+    <script src="sanPham.js"></script>
+    <script src="formValidation.js"></script>
+    <style>
+        *{
+            box-sizing: border-box;
+            padding: 0;
+            margin: 0;
+        }
+        .them-moi-san-pham{
+            width: 50%;
+            border: 1px solid rgb(104, 103, 103);
+            margin: auto;
+            padding: 30px;
+            margin-top: 50px;
+            box-shadow: 2px 2px 5px #444;
+        }
+        .them-moi-san-pham label, input{
+            width: 100%;
+            display: block;   
+        }
+        .them-moi-san-pham label{
+            margin-top: 20px;
+        }
+        .them-moi-san-pham input{
+            margin-top: 5px;
+            padding: 10px 20px;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+        }
+        .them-moi-san-pham button{
+            width: 100%;
+            margin-top: 20px;
+            padding: 10px 20px;
+            border: 1px solid rgb(7, 7, 7);
+            border-radius: 5px;
+            background-color: #f55f4b;
+            color: #fff;
+        }
+        .them-moi-san-pham button:hover{
+            background-color: rgb(252, 63, 38);
+        }
+        .them-moi-san-pham .error{
+            font-size: 12px;
+            color: red;
+            line-height: 12px;
+            height: 12px;
+            margin-top: 5px;
+            padding-bottom: 15px;
+            margin-left: 10px;
+            font-style:  italic;
+        }
+    </style>
+</head>
+<body>
+    <div class="them-moi-san-pham">
+        <label for="hinhAnh">Hình ảnh sản phẩm</label>
+        <input notnull oninput="Onvaluechange()" type="text" id="hinhAnh" name="Hình ảnh">
+        <!--thông báo lỗi-->
+        <label id="thongbaoLoiHinhAnh" for="hinhAnh" class="error"></label>
+
+        <label for="ten">Tên sản phẩm</label>
+        <input notnull oninput="Onvaluechange()" type="text" id="ten" name="Tên sản phẩm">
+        <!--thông báo lỗi-->
+        <label id="thongbaoLoiTen" for="ten" class="error"></label>
+
+        <label for="giaGoc">Giá gốc sản phẩm</label>
+        <input notnull khongam oninput="Onvaluechange()" type="number" id="giaGoc" name="Giá gốc">
+        <!--thông báo lỗi-->
+        <label id="thongbaoLoiGiaGoc" for="giaGoc" class="error"></label>
+
+        <label for="phanTramGiamGia">Phần trăm giảm giá (0-100)%</label>
+        <input notnull  quagioihan oninput="Onvaluechange()" type="number" id="phanTramGiamGia" name="Phần trăm giảm giá">
+        <!--thông báo lỗi-->
+        <label id="thongbaoLoiPhanTramGiamGia" for="phanTramGiamGia" class="error"></label>
+
+        <label for="khuVuc">Khu vực</label>
+        <input notnull oninput="Onvaluechange()" type="text" id="khuVuc" name="Khu vực">
+        <!--thông báo lỗi-->
+        <label id="thongbaoLoiKhuVuc" for="khuVuc" class="error"></label>
+
+        <button onclick="onClickTaoSanPham()">Tạo sản phẩm</button>
+    </div>
+
+    <script>
+        /*B1. Lấy danh sách sản phẩm trong LCS*/
+        /*dòng 72, vì lấy lên sẽ là dạng string nên phải parse thành danh sách JSON thành object*/
+        var danhSachSanPham = JSON.parse(localStorage.getItem('danhSachSanPham'));
+        if(danhSachSanPham == null){
+            danhSachSanPham = new Array();
+        }
+        console.log(danhSachSanPham);
+
+
+
+        /*NHIỆM VỤ:
+        1. lắng nghe ONCLICK khi nhấp vào button
+        2. lấy toàn bộ dữ liệu người dùn nhập vào
+        3. tạo ra toàn bộ sản phẩm*/
+
+        function onClickTaoSanPham(){
+            var nodeCha = event.target.parentElement;
+            if(!ktraHopLe(nodeCha)){
+                return
+            }
+
+            /*kiểm tra dữ liệu hợp lệ k*/
+            
+                console.log('gọi hàm onClickTaoSanPham()');
+                /*Truy cập vào node*/
+                var nodeHinhAnh = document.getElementById('hinhAnh');
+                var hinhAnh = nodeHinhAnh.value;
+                console.log('Hình ảnh là: ' + hinhAnh);
+
+                var nodeTen = document.getElementById('ten');
+                var ten = nodeTen.value;
+                console.log('Tên sản phẩm là: ' +ten);
+
+                var nodeGiaGoc = document.getElementById('giaGoc');
+                var giaGoc = parseInt(nodeGiaGoc.value);
+                console.log('Giá gốc là: '+giaGoc);
+
+                var nodePhanTramGiamGia = document.getElementById('phanTramGiamGia');
+                var phanTramGiamGia = parseFloat(nodePhanTramGiamGia.value);
+                console.log('Phần trăm giảm giá là: ' + phanTramGiamGia);
+
+                var nodeKhuVuc = document.getElementById('khuVuc');
+                var khuVuc = nodeKhuVuc.value;
+                console.log('Khu vực: ' + khuVuc);
+                
+                /*Tạo ra đối tượng khi nhập liệu vào*/
+                var sanPham = taoDoiTuongSanPham(hinhAnh, ten, giaGoc, phanTramGiamGia, khuVuc);
+                console.log(sanPham);
+
+                console.log('Tên sản phẩm nhập vào là: '+sanPham.ten + ' và gián bán sản phẩm là: '+sanPham.tinhGiaBan());
+                /*ĐƯA SẢN PHẨM VÀO DANH SÁCH*/
+                danhSachSanPham.push(sanPham);
+                console.log('Danh sách sản phẩm là: ');
+                console.log(danhSachSanPham);
+
+                /*LƯU TRỮ DANH SÁCH SẢN PHẨM XUỐNG LCS*/
+                var jsonDanhSachSanPham = JSON.stringify(danhSachSanPham);
+                localStorage.setItem('danhSachSanPham', jsonDanhSachSanPham);
+
+                alert('Thêm vào thành công!');
+        }
+            
+        
+        
+    </script>
+</body>
+</html>

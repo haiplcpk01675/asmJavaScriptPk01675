@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Danh sách sản phẩm</title>
+    <script src="https://kit.fontawesome.com/a6063db324.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="css/style.css">
+    <script src="until.js"></script>
+    <script src="sanPham.js"></script>
+    <script src="gioHang.js"></script>
+</head>
+<body>
+    <nav id="nav-bar">
+        <ul class="menu-lv1">
+            <li class="item-lv1">
+                <a href="#" class="item-lv1-title">Quần áo</a>
+                <ul class="menu-lv2">
+                    <li class="item-lv2">
+                        <a href="#" class="item-lv2-title">Quần áo Nam</a>
+                    </li>
+                    <li class="item-lv2">
+                        <a href="#" class="item-lv2-title">Quần áo Nữ</a>
+                    </li>
+                </ul>
+            </li>
+            <li class="item-lv1">
+                <a href="#" class="item-lv1-title">Phụ kiện</a>
+            </li>
+            <li class="item-lv1">
+                <a href="#" class="item-lv1-title">Đồ điện tử</a>
+                <ul class="menu-lv2">
+                    <li class="item-lv2">
+                        <a href="#" class="item-lv2-title">Điện thoại</a>
+                    </li>
+                    <li class="item-lv2">
+                        <a href="#" class="item-lv2-title">Đồ gia dụng</a>
+                    </li>
+                </ul>
+            </li>
+            <li class="item-lv1">
+                <i class="fas fa-cart-arrow-down"></i>
+            </li>
+        </ul>
+    </nav>
+    <section id="slider">
+        <img src="https://didongthongminh.vn/upload_images/2019/10/%C4%90%E1%BA%B7t-h%C3%A0ng-iphone-11-series-1.jpg" alt="">
+    </section>
+    <section id="products">
+        <!--Hiển thị danh sách sản phẩm-->
+        <div class="items">
+            <div class="item">
+                <div class="item-hinhAnh">
+                    <img src="https://cdn.tgdd.vn/Products/Images/42/60546/iphone-5s-16gb-7-400x460.png" alt="">
+                </div>
+                <h2 class="item-ten">Iphone 5</h2>
+                <div class="item-gia">
+                    <span class="item-gia-goc">5000000 đ</span>
+                    <span class="item-gia-ban">4000000 đ</span>
+                </div>
+                <button class="btn btn-primary">Thêm vào giỏ hàng</button>
+            </div>
+            <div class="item">
+                <div class="item-hinhAnh">
+                    <img src="https://cdn.tgdd.vn/Products/Images/42/60546/iphone-5s-16gb-7-400x460.png" alt="">
+                </div>
+                <h2 class="item-ten">Iphone 5</h2>
+                <div class="item-gia">
+                    <span class="item-gia-goc">5000000 đ</span>
+                    <span class="item-gia-ban">4000000 đ</span>
+                </div>
+                <button class="btn btn-primary">Thêm vào giỏ hàng</button>
+            </div>
+            <div class="item">
+                <div class="item-hinhAnh">
+                    <img src="https://cdn.tgdd.vn/Products/Images/42/60546/iphone-5s-16gb-7-400x460.png" alt="">
+                </div>
+                <h2 class="item-ten">Iphone 5</h2>
+                <div class="item-gia">
+                    <span class="item-gia-goc">5000000 đ</span>
+                    <span class="item-gia-ban">4000000 đ</span>
+                </div>
+                <button class="btn btn-primary">Thêm vào giỏ hàng</button>
+            </div>
+            <div class="item">
+                <div class="item-hinhAnh">
+                    <img src="https://cdn.tgdd.vn/Products/Images/42/60546/iphone-5s-16gb-7-400x460.png" alt="">
+                </div>
+                <h2 class="item-ten">Iphone 5</h2>
+                <div class="item-gia">
+                    <span class="item-gia-goc">5000000 đ</span>
+                    <span class="item-gia-ban">4000000 đ</span>
+                </div>
+                <button class="btn btn-primary">Thêm vào giỏ hàng</button>
+            </div>
+        </div>
+    </section>
+    <footer>
+        Đinh Quốc Hải - PK01675
+    </footer>
+
+    <script>
+        /*b1. Lấy danh sách dưới LCS*/
+        var jsonDanhSachSanPham = localStorage.getItem('danhSachSanPham');
+        var danhSachSanPham = taoDoiTuongSanPham().fromJSONs(jsonDanhSachSanPham);
+        console.log(danhSachSanPham);
+        
+
+        /*b2. CHUYỂN danh sách đối tượng thành đoạn html*/
+        var HTML = chuyenDanhSachDoiTuongSanPhamThanhHTML(danhSachSanPham);
+
+        /*b3. gắn sản phẩm vào products*/
+        var nodeProducts = document.getElementById('products');
+        nodeProducts.innerHTML = HTML;
+
+        function onClickThemVaoGioHang(idSanPham){
+            alert('Thêm vào giỏ hàng sản phẩm có ID '+idSanPham+' thành công!');
+
+            /*Logic đưa vào giỏ hàng*/
+            /*B1: Phân tích csdl hiện có trong giỏ hàng là gì
+                Danh sách các đối tượng là item giỏ hàng
+                item giỏ hàng là gi:
+                    id sản phẩm
+                    số lượng sản phẩm*/
+
+            /*Bước 2: xây dựng hàm tạo nhanh đối tượng item giỏ hàng*/
+            var gioHangCu = layGioHangTuLCS();
+            console.log('Giỏ hàng cũ: ');
+            console.log(gioHangCu);
+            /*Bước 3: Tạo đối tượng item giỏ hàng, số lượng mặc định là 1*/
+            var gioHangMoi  = themSanPhamVaoGioHang(idSanPham, gioHangCu);
+            /*Bước 4: Lấy danh sách item giỏ hàng dưới lcs*/
+            console.log('Giỏ hàng mới: ');
+            console.log(gioHangMoi);
+            luuGioHangVaoLCS(gioHangMoi);
+            /*Bước 5: Nếu danh sách trong giỏ hàng tồn tại thì tăng lên 1*/
+
+            /*Bước 6: Nếu trong item giỏ hàng không tồn tại thì thêm vào giỏ hàng*/
+        }
+    </script>
+</body>
+</html>

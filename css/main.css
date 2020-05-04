@@ -1,0 +1,313 @@
+body{
+	width: 100%;
+	min-height: 2600px;
+	font-family: tahoma;
+	margin: 0px;
+	padding: 0px;
+	color: black;
+	font-size: 16px;
+}
+ul, ol, h1, h2, h3{
+	margin: 0px;
+	padding: 0px;
+}
+li {
+	margin: 0px;
+	padding: 0px;
+}
+a {
+	margin: 0px;
+	padding: 0px;
+	color: #fff;
+	text-decoration: none;
+	letter-spacing: -0.5px;
+}
+a:hover {
+	color: #fd6136;
+}
+/*TRANGCHU - INDEX*/
+/*======HEADER======*/
+
+.zoom:hover{
+  transform: scale(1.1); /* (150% zoom - Note: if the zoom is too large, it will go outside of the viewport) */
+}
+.thanhheader{
+	width: 100%;
+	height: 150px;
+	position: fixed;
+    top: 0;
+    z-index: 99999;
+}
+.active a{
+	color: #f8852f;
+}
+.thanhtren{
+	width: 100%;
+	height: 40px;
+	background-color: #000000;
+}
+
+
+/*======FOOTER======*/
+footer{
+	width: 100%;
+	height: 595px;
+}
+
+.footer1{
+	width: 100%;
+	height: 527px;
+	background-color: #2a2828;
+}
+.thanhtrenft1{
+	width: 1200px;
+	height: 270px;
+	margin: 0 auto;
+}
+.hhhh1{
+	width: 218px;
+	height: 220px;
+	margin-top: 47px;
+	float: left;
+}
+.tieude1{
+	width: 350px;
+	height: 25px;
+	float: left;
+}
+.tieude1 a{
+	color: #fe5806;
+	font-size: 16px;
+	line-height: 16px;
+	font-weight: bold;
+	letter-spacing: 0.5px;
+}
+.ndung1{
+	width: 170px;
+	height: 130px;
+}
+.ndung1 li{
+	list-style: none;
+}
+.ndung1 a{
+	color: #fff;
+	font-size: 14px;
+	line-height: 30px;
+}
+.ndung1 a:hover{
+	color: #fe5806;
+}
+.duoitd1{
+	margin-top: 75px;
+	width: 218px;
+	height: 25px;
+	float: left;
+}
+.duoitd1 a{
+	color: #fe5806;
+	font-size: 16px;
+	line-height: 16px;
+	font-weight: bold;
+	letter-spacing: 0.5px;
+}
+.hhhh2{
+	width: 270px;
+	height: 220px;
+	margin-top: 47px;
+	float: left;
+}
+.hhhh3{
+	width: 352px;
+	height: 220px;
+	margin-top: 47px;
+	float: left;
+}
+.hhhh4{
+	width: 360px;
+	height: 220px;
+	margin-top: 47px;
+	float: left;
+}
+.thanhtrenft2{
+	width: 1200px;
+	height: 70px;
+	margin: 0 auto;
+}
+.thanhtraift2{
+	width: 488px;
+	height: 70px;
+	float: left;
+}
+.logofb{
+	width: 55px;
+	height: 50px;
+	margin-top: 10px;
+	float: left;
+}
+.banquyen2{
+	width: 290px;
+	height: 40px;
+	float: left;
+	margin-left: 5px;
+	margin-top: 20px;
+}
+.banquyen2 li{
+	list-style: none;
+}
+.banquyen2 a{
+	font-size: 16px;
+	line-height: 16px;
+	font-weight: bold;
+	color: #fff;
+	letter-spacing: 1px;
+}
+.banquyen2 a:hover{
+	color: #fe5806;
+}
+.thanhphaift2{
+	width: 712px;
+	height: 70px;
+	float: left;
+}
+.thanhphaift2 nav{
+	width: 712px;
+	height: 45px;
+	margin: 0 auto;
+}
+.thanhphaift2  li {
+	float: left;
+	margin: 0 auto;
+	list-style: none;
+}
+.thanhphaift2  a{
+	float: left;
+	margin-left: 45px;
+	margin-top: 10px;
+}
+.thanhtrenft3{
+	width: 1200px;
+	height: 40px;
+	margin: 0 auto;
+}
+.logolike{
+	width: 50px;
+	height: 20px;
+	float: left;
+	margin-top: 2px;
+}
+.ndlike{
+	width: 290px;
+	height: 40px;
+	float: left;
+	margin-left: 5px;
+}
+.ndlike a{
+	font-size: 13px;
+	color: #706f6f;
+}
+.thanhtrenft4{
+	width: 1200px;
+	height: 150px;
+	margin: 0 auto;
+}
+.mangxahoi{
+	width: 488px;
+	height: 60px;
+	float: left;
+}
+.mangxahoi nav{
+	width: 488px;
+	height: 50px;
+	margin: 0 auto;
+}
+.mangxahoi  li {
+	float: left;
+	margin: 0 auto;
+	list-style: none;
+}
+.mangxahoi  a{
+	float: left;
+	margin-left: 5px;
+	padding-right: 15px;
+	margin-top: 30px;
+}
+.thongtinlhth{
+	width: 712px;
+	height: 80px;
+	float: left;
+}
+.thongtinlhth nav{
+	width: 712px;
+	height: 80px;
+	margin: 0 auto;
+}
+.thongtinlhth  li {
+	float: left;
+	margin: 0 auto;
+	list-style: none;
+}
+.thongtinlhth  a{
+	width: 215px;
+	height: 80px;
+	float: left;
+	margin-left: 5px;
+	padding-right: 15px;
+	margin-top: 30px;
+	line-height: 15px;
+	color: #9a9a9a;
+	font-size: 12px;
+}
+.footer2{
+	width: 100%;
+	height: 27px;
+	background-color: #000000;
+}
+.ndft2{
+	width: 1200px;
+	height: 27px;
+	margin: 0 auto;
+}
+.ndft2 nav{
+	width: 1200px;
+	height: 27px;
+	margin: 0 auto;
+}
+.ndft2  li {
+	float: left;
+	margin: 0 auto;
+	list-style: none;
+}
+.ndft2  a{
+	float: left;
+	margin-left: 35px;
+	padding-right: 65px;
+	line-height: 15px;
+	font-size: 15px;
+	color: #fff;
+	margin-top: 5px;
+}
+.ndft2  a:hover{
+	color: #f8852f;
+}
+.footer3{
+	width: 400px;
+	height: 40px;
+	margin: 0 auto;
+}
+.logofpt{
+	width: 95px;
+	height: 40px;
+	float: left;
+}
+.banquyen{
+	width: 290px;
+	height: 40px;
+	float: left;
+	margin-left: 10px;
+	margin-top: 20px;
+}
+.banquyen a{
+	font-size: 15px;
+	color: #000000;
+}
+
