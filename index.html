@@ -214,21 +214,11 @@
                 <button class="nbtnn htbl active">Mới nhất</button>
                 <button class="nbtnn htbl">Bán chạy</button>
 
-                <div class="select-input">
-                    <span class="select-input_label">Giá</span>
-                    <i class="select-input_icon fas fa-angle-down"></i>
-                    <ul class="select-input_list">
-                        <li class="select-input_item">
-                            <a class="select-input_link" href="#">Sắp xếp lộn xộn</a>
-                        </li>
-                        <li class="select-input_item">    
-                            <a class="select-input_link" href="#">Giá Cao đến thấp</a>
-                        </li>
-                        <li class="select-input_item">
-                            <a class="select-input_link" href="#">Giá Thấp đến cao</a>
-                        </li>
-                    </ul>
-                </div>
+                <select id="sap-xep" class="btn btn-sm w3-border float-right mr-2" onchange="sapXepSanPham()">
+                    <option value="" disabled selected>Giá</option>
+                    <option value="tangDan">Giá tăng dần</option>
+                    <option value="giamDan">Giá giảm dần</option>            
+                </select>
                 <div class="hom-filter_page">
                     <span class="hom-filter_page-num">
                         <span class="tranghtai">1</span>/15
