@@ -342,18 +342,19 @@
         function sapXepSanPham(){
             var cachSapXep = document.getElementById('sap-xep').value;
             console.log(cachSapXep);
-            var danhSachDoiTuongDayDu = fromJSONs();
+            var danhSachSanPham = localStorage.getItem('danhSachSanPham');
+            var danhSachSanPhamSX = taoDoiTuongSanPham().fromJSONs(danhSachSanPham);
 
             if(cachSapXep = 'giamDan'){
-                danhSachDoiTuongDayDu.sort((a,b)=> (a.tinhGiaBan())>(b.tinhGiaBan())? 1 : -1);
-                console.log(danhSachDoiTuongDayDu);
+                danhSachSanPhamSX.sort((a,b)=> (a.tinhGiaBan())>(b.tinhGiaBan())? 1 : -1);
+                console.log(danhSachSanPhamSX);
             }
 
             if(cachSapXep = 'tangDan'){
-                danhSachDoiTuongDayDu.sort((a,b)=> (a.tinhGiaBan())>(b.tinhGiaBan())? -1 : 1);
-                console.log(danhSachDoiTuongDayDu);
+                danhSachSanPhamSX.sort((a,b)=> (a.tinhGiaBan())>(b.tinhGiaBan())? -1 : 1);
+                console.log(danhSachSanPhamSX);
             }
-            html = chuyenDanhSachDoiTuongSanPhamThanhHTML(danhSachDoiTuongDayDu);
+            html = chuyenDanhSachDoiTuongSanPhamThanhHTML(danhSachSanPhamSX);
             nodeProducts = document.getElementById('products');
             nodeProducts.innerHTML = html;
 
