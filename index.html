@@ -214,8 +214,8 @@
                 <button class="nbtnn htbl active">Mới nhất</button>
                 <button class="nbtnn htbl">Bán chạy</button>
 
-                <select id="sap-xep" class="btn btn-sm w3-border float-right mr-2" onchange="sapXepSanPham()">
-                    <option value="" disabled selected>Giá</option>
+                <select id="sap-xep" class="btn" onchange="sapXepSanPham()">
+                    <option value=""selected>Giá</option>
                     <option value="tangDan">Giá tăng dần</option>
                     <option value="giamDan">Giá giảm dần</option>            
                 </select>
@@ -338,6 +338,25 @@
             }
             /*b5. lưu lại lcs*/
             luuDanhSachItemGioHangVaoLCS(danhSachItemGioHang);
+        }
+        function sapXepSanPham(){
+            var cachSapXep = document.getElementById('sap-xep').value;
+            console.log(cachSapXep);
+            var danhSachDoiTuongDayDu = fromJSONs();
+
+            if(cachSapXep = 'giamDan'){
+                danhSachDoiTuongDayDu.sort((a,b)=> (a.tinhGiaBan())>(b.tinhGiaBan())? 1 : -1);
+                console.log(danhSachDoiTuongDayDu);
+            }
+
+            if(cachSapXep = 'tangDan'){
+                danhSachDoiTuongDayDu.sort((a,b)=> (a.tinhGiaBan())>(b.tinhGiaBan())? -1 : 1);
+                console.log(danhSachDoiTuongDayDu);
+            }
+            html = chuyenDanhSachDoiTuongSanPhamThanhHTML(danhSachDoiTuongDayDu);
+            nodeProducts = document.getElementById('products');
+            nodeProducts.innerHTML = html;
+
         }
     </script>
 </body>
