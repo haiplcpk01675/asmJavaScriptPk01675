@@ -192,3 +192,19 @@ i.item-khuVuc-like-fill{
     margin-left: 10px;
     font-style:  italic;
 }
+.pt-giam-gia {
+    width: 40px;
+    height: 36px;
+    position: absolute;
+    top: 0;
+    right: 0;
+
+    /* text-align: center; */
+    text-align: center;
+
+    padding-top: 2px;
+    color: #fff;
+    font-weight: 500;
+    background-image: url('images/deal-tag.png');
+    background-repeat: no-repeat;
+}

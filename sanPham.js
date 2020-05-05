@@ -96,6 +96,7 @@ function chuyenDoiTuongSanPhamThanhHTML(sanPham){
     html +=         '<span class="item-gia-goc">' + themChamVaoSo(sanPham.giaGoc) +' đ</span>'
     html +=         '<span class="item-gia-ban">' + themChamVaoSo(sanPham.tinhGiaBan()) +' đ</span>'
     html +=     '</div>'
+    html +=     '<span class="pt-giam-gia">' + sanPham.phanTramGiamGia + ' %</span>';
     html +=     '<div class="item-khuVuc">'
     html +=         '<span class="item-khuVuc-like item-khuVuc-like--like">'
     html +=             '<i class="item-khuVuc-like-empty far fa-heart"></i>'
