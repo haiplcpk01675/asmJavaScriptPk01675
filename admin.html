@@ -91,11 +91,7 @@
     <script>
         /*B1. Lấy danh sách sản phẩm trong LCS*/
         /*dòng 72, vì lấy lên sẽ là dạng string nên phải parse thành danh sách JSON thành object*/
-        var danhSachSanPham = JSON.parse(localStorage.getItem('danhSachSanPham'));
-        if(danhSachSanPham == null){
-            danhSachSanPham = new Array();
-        }
-        console.log(danhSachSanPham);
+        
 
 
 
@@ -111,7 +107,11 @@
             }
 
             /*kiểm tra dữ liệu hợp lệ k*/
-            
+                var danhSachSanPham = JSON.parse(localStorage.getItem('danhSachSanPham'));
+                if(danhSachSanPham == null){
+                    danhSachSanPham = new Array();
+                }
+                console.log(danhSachSanPham);
                 console.log('gọi hàm onClickTaoSanPham()');
                 /*Truy cập vào node*/
                 var nodeHinhAnh = document.getElementById('hinhAnh');
@@ -149,8 +149,8 @@
                 localStorage.setItem('danhSachSanPham', jsonDanhSachSanPham);
 
                 alert('Thêm vào thành công!');
-        }
             
+        }        
         
         
     </script>

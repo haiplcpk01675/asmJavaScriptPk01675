@@ -73,7 +73,7 @@
                 </ul>
             </nav>
             <div class="header-logo">
-                <a href="index.html"><img src="images/pinterest_board_photo.png" alt=""></a>
+                <a href="index.html"><img src="images/image.png" alt=""></a>
             </div>  
             <div class="header-giua">
                 <div class="menu">
@@ -144,25 +144,15 @@
                             </li>
                         </ul>
                     </nav>
-                </div>
                 
                 <div class="timkiem">
                     
                     <input notnull oninput="Onvaluechange()" type="text" class="noidung-timkiem" placeholder="Tìm kiếm trong Shop">
                     <label for="noidung-timkiem" class="error"></label>
-                    <div class="timkiemtrong-select">
-                        <span class="label">Trong Shop</span>
-                        <i class="fas fa-angle-down"></i>
-                        <ul class="timkiem-option">
-                            <li class="timkiemitem">
-                                <span>Trong Shop</span>
-                                <i class="fas fa-check"></i>
-                            </li>
-                            <li class="timkiemitem">
-                                <span>Ngoài Shop</span>
-                            </li>
-                        </ul>
-                    </div>
+                    <select id="timkiemchon" class="btntimkiemchon">
+                        <option value="trong">Trong Shop</option>
+                        <option value="ngoai">Ngoài Shop</option>            
+                    </select>
                     <button class="btn-timkiem">
                         <i class="btn-timkiemlg fas fa-search"></i>
                     </button>

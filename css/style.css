@@ -167,14 +167,16 @@ body{
 }
 /**/
 #noidung-header{
-    width: 1200px;
+    max-width: 1200px;
     margin: auto;
+
 }
 
 .header-logo{
     width: 150px;
     float: left;
     margin-top: 10px;
+    margin-left: 30px;
 }
 .header-logo img{
     width: 100%;
@@ -188,14 +190,12 @@ body{
     width: 900px;
     float: left;
 }
-.header-muahang{
-    width: 150px;
-    height: 150px;
+#noidung-header .header-muahang{
     float: right;
+    margin-right: -50px;
+    margin-top: -35px;
 }
 .header-muahang .fas{
-    margin-left: 40px;
-    margin-top: 98px;
     font-size: 25px;
 }
 .header-muahang .fas:hover{
@@ -203,31 +203,32 @@ body{
 }
 /*=======TÌM KIẾM=============*/
 .timkiem{
-    width: 800px;
+    width: 750px;
     background-color: white;
     margin-top: 20px;
-    flex: 1;
     height: 40px;
-    margin-left: 50px;
+    margin-left: 70px;
     border-radius: 4px;
-    display: flex;
-    
+    display: flex; 
 }
-.khung-tim-kiem{
-    width: 600px;
-    flex: 1;
+.timkiem .khung-tim-kiem{
     position: relative;
-
 }
 .noidung-timkiem{
-    width: 600px;
+    width: 650px;
     height: 100%;
     border: none;
     outline: none;
-    font-size: 14px;
+    font-size: 15px;
     color: silver;
     margin-left: 10px;
     border-right: 1px solid silver;
+}
+.btntimkiemchon{
+    width: 120px;
+    margin-left: -100px; 
+    border: none;
+    cursor: pointer;    
 }
 /*======LỊCH SỬ TÌM KIẾM============*/
 .lichsu-timkiem{
@@ -240,14 +241,16 @@ body{
     box-shadow: 0 1px 3px #666;
 }
 .timkiemtrong-select{
+    max-width: 300px;
     margin-left: 5px;
     position: relative;
+    margin-top: 10px;
     z-index: 3;
 }
 .timkiemtrong-select span{
     color: rgb(22, 21, 21);
     text-decoration: none;
-    align-items: center;
+    margin-top: 10px;
 }
 .timkiemtrong-select .fas{
     color: black;
@@ -260,7 +263,9 @@ body{
     height: 34px;
     width: 60px;
     border-radius: 3px;
-    margin: auto;
+    margin-top: 3px;
+    margin-right: 3px;
+    margin-left: 20px;
 }
 .timkiem-option li{
     list-style: none;
@@ -316,8 +321,7 @@ body{
 .btn-timkiemlg{
     font-size: 14px;
     color: #ddd;
-
-
+    margin-left: 8px;
 }
 /*=========NAV BAR===========*/
 #nav-bar{
@@ -544,6 +548,7 @@ body{
     color: rgb(22, 21, 21);
 }
 .label{
+    max-width: 100px;
     font-size: 14px;
     color: #fff;
     margin-right: 16px;
