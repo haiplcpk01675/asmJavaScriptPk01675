@@ -16,6 +16,18 @@
     <script src="gioHang.js"></script>
     <script src="formValidation.js"></script>
     <link rel="stylesheet" href="css/styles.css">
+    <style>
+        .error2{
+            font-size: 12px;
+            color: #fff;
+            line-height: 12px;
+            height: 12px;
+            margin-top: 5px;
+            padding-bottom: 15px;
+            margin-left: 100px;
+            font-style:  italic; 
+        }
+    </style>
 	 <script>
     	$(document).ready(function(){
       	$('.slider').bxSlider({
@@ -69,7 +81,7 @@
                         <a href="#"><i class="far fa-question-circle"></i>Trợ giúp</a>
                     </li>
                     <li class="nd1 phancachchedoc"><a href="#">Đăng ký</a></li>
-                    <li class="nd1"><a href="Them_moi_san_pham.html" target="blank">Đăng nhập</a></li>
+                    <li class="nd1"><a href="admin.html" target="blank">Đăng nhập</a></li>
                 </ul>
             </nav>
             <div class="header-logo">
@@ -145,15 +157,15 @@
                         </ul>
                     </nav>
                 
-                <div class="timkiem">
-                    
-                    <input notnull oninput="Onvaluechange()" type="text" class="noidung-timkiem" placeholder="Tìm kiếm trong Shop">
-                    <label for="noidung-timkiem" class="error"></label>
+                <div class="timkiem">                    
+                    <input notnull oninput="Onvaluechange()" type="text" name="Tìm kiếm" id="noidung-timkiem" class="noidung-timkiem" placeholder="Tìm kiếm trong Shop">
+                    <!--thông báo lỗi-->
+                    <label id="thongbaoLoi" for="noidung-timkiem" class="error2"></label>
                     <select id="timkiemchon" class="btntimkiemchon">
                         <option value="trong">Trong Shop</option>
                         <option value="ngoai">Ngoài Shop</option>            
                     </select>
-                    <button class="btn-timkiem">
+                    <button onclick="onclickTimKiem()" class="btn-timkiem">
                         <i class="btn-timkiemlg fas fa-search"></i>
                     </button>
                 </div>   
@@ -347,7 +359,12 @@
             html = chuyenDanhSachDoiTuongSanPhamThanhHTML(danhSachSanPhamSX);
             nodeProducts = document.getElementById('products');
             nodeProducts.innerHTML = html;
-
+        }
+        function onclickTimKiem(){
+            var nodeCha = event.target.parentElement;
+            if(!ktraHopLe(nodeCha)){
+                return
+            }
         }
     </script>
 </body>
