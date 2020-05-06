@@ -26,6 +26,7 @@ img{
     display: flex;
     flex-direction: row;
     align-items: center;
+    padding-bottom: 10px;
 }
 .item-giohang .hinhanh img{
     width: 60px;
