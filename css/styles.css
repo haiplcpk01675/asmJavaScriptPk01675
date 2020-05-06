@@ -201,7 +201,7 @@ i.item-khuVuc-like-fill{
 
     /* text-align: center; */
     text-align: center;
-    display: block;
+    display: inline-block;
     padding-top: 2px;
     color: #fff;
     font-weight: 500;
