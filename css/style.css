@@ -384,6 +384,7 @@ body{
     margin-top: 50px;
     display: none;
     z-index: 33;
+    animation: fadeIn ease-in 0.4s;
 }
 
 .menu-lv2 a{
