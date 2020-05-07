@@ -16,12 +16,13 @@
     <script src="gioHang.js"></script>
     <script src="formValidation.js"></script>
     <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="css/animations.css">
     <style>
         .error2{
             font-size: 12px;
-            color: #fff;
+            color: rgb(243, 33, 33);
             line-height: 12px;
-            height: 12px;
+            height: 15px;
             margin-top: 5px;
             padding-bottom: 15px;
             margin-left: 100px;
@@ -80,8 +81,8 @@
                     <li class="nd1">
                         <a href="#"><i class="far fa-question-circle"></i>Trợ giúp</a>
                     </li>
-                    <li class="nd1 phancachchedoc"><a href="#">Đăng ký</a></li>
-                    <li class="nd1"><a href="admin.html" target="blank">Đăng nhập</a></li>
+                    <li class="nd1 phancachchedoc"><a onclick="nodeDangKy()">Đăng ký</a></li>
+                    <li class="nd1"><a onclick="nodeDangNhap()">Đăng nhập</a></li>
                 </ul>
             </nav>
             <div class="header-logo">
@@ -286,6 +287,95 @@
 
     </footer>
 
+
+    <!--Khung đăng nhập và đăng kí-->
+    <div id="dangKy" class="hienThiDkDn">
+        <div class="hienThiDkDn__body">
+            <!--Nội dung trong đăg kí-->
+            <div class="khung_inner">
+                <div class="khunginner__noidung">
+                    <div class="khung_inner_tren">
+                        <h3 class="heading_inner">Đăng ký</h3>
+                        <span id="chuyenDn" class="chuyenDn"  onclick="nodeDangNhap()" >Đăng nhập</span>
+                    </div>
+                    <div class="khunginner_phan2">
+                        <div class="nhominput">
+                            <input notnull oninput="Onvaluechange()" name="Số điện thoại/Email/Tên Đăng ký" type="text" id="khunginner__input" class="khunginner__input" placeholder="Số điện thoại/Email/Tên Đăng ký"> 
+                            <!--thông báo lỗi-->
+                            <label id="thongbaoLoi" for="khunginner__input" class="error2"></label>
+                        </div>
+                        
+                        <div class="nhominput">
+                            <input notnull oninput="Onvaluechange()" name="Mật khẩu" type="password" id="khunginner__input" class="khunginner__input" placeholder="Mật khẩu của bạn">                            
+                            <!--thông báo lỗi-->
+                            <label id="thongbaoLoi" for="khunginner__input" class="error2"></label>
+                        </div>
+                        
+                        <div class="nhominput">
+                            <input notnull oninput="Onvaluechange()" name="Mật khẩu" type="password" id="khunginner__input" class="khunginner__input" placeholder="Nhập lại mật khẩu">                            
+                            <!--thông báo lỗi-->
+                            <label id="thongbaoLoi" for="khunginner__input" class="error2"></label>
+                        </div>
+                        
+                    </div>
+                    <div class="khunginner_phan3">
+                        <p class="chuChinhSachText">
+                            Bằng việc đăng kí, bạn đã đồng ý với ShopSale về
+                            <a href="" class="LinkDieuKhoan">Điều khoản dịch vụ</a> &
+                            <a href="" class="LinkDieuKhoan">Chính sách bảo mật</a>
+                        </p>
+                    </div>
+                    <div class="nutDieuKhien">
+                        <button onclick="anDangKy()" class="bttrtn">TRỞ LẠI</button>
+                        <button class="btn-chinh" onclick="xacNhanDangKy()">ĐĂNG KÝ</button>
+                    </div>
+                </div>
+                <div class="khungMxh">
+                    <img class="mxhKhung" src="images/facebook.png" alt="">
+                    <img class="mxhKhung" src="images/google.png" alt="">
+                </div>
+            </div>
+        </div> 
+    </div>   
+    <div id="dangNhap" class="hienThiDkDnh">
+        <div class="hienThiDkDn__body">
+            <!--Nội dung trong đăg nhập-->
+            <div class="khung_inner">
+                <div class="khunginner__noidung">
+                    <div class="khung_inner_tren">
+                        <h3 class="heading_inner">Đăng nhập</h3>
+                        <span class="chuyenDn" onclick="nodeDangKy()">Đăng ký</span>
+                    </div>
+                    <div class="khunginner_phan2">
+                        <div class="nhominput">
+                            <input type="text"class="khunginner__input" placeholder="Số điện thoại/Email/Tên Đăng ký">
+                        </div>
+                        <div class="nhominput">
+                            <input type="password"class="khunginner__input" placeholder="Mật khẩu của bạn">
+                        </div>
+                    </div>
+                    <div class="khunginner_phan3">
+                        <div class="quenMk">
+                            <a href="" class="quenMkLink">Quên mật khẩu</a>
+                            <a href="" class="quenMkLink2">Cần trợ giúp?</a>
+                        </div>
+                        
+                    </div>
+                    <div class="nutDieuKhien">
+                        <button onclick="anDangNhap()" class="bttrtn">TRỞ LẠI</button>
+                        <button class="btn-chinh">ĐĂNG NHẬP</button>
+                    </div>
+                </div>
+                <div class="khungMxh">
+                    <img class="mxhKhung" src="images/facebook.png" alt="">
+                    <img class="mxhKhung" src="images/google.png" alt="">
+                </div>
+            </div>
+        </div>
+    </div> 
+
+
+
     <script>
         $(document).ready(function () {
             $('.item-lv1 li').hover(function () {
@@ -296,6 +386,7 @@
             }
             );
         });
+        
     </script>
     <script>
         /*b1. Lấy danh sách dưới LCS*/
@@ -365,6 +456,14 @@
             if(!ktraHopLe(nodeCha)){
                 return
             }
+        }
+        function xacNhanDangKy(){
+            var nodeCha = event.target.parentElement;
+            if(!ktraHopLe(nodeCha)){
+                return 
+                
+            }
+            alert('Đăng ký thành công!') ;              
         }
     </script>
 </body>

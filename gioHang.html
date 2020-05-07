@@ -1,337 +1,418 @@
  <!DOCTYPE html>
 <html lang="en">
-    <head>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>Thanh toán</title>
-        <link href="css/jquery.bxslider.css" rel="stylesheet">
-        <link rel="stylesheet" href="css/cart.css">
-        <link rel="stylesheet" href="css/gioHang.css">
-        <link rel="stylesheet" href="css/style.css">
-        <link rel="stylesheet" href="fonts/fontawesome-free-5.13.0-web/css/all.min.css">
-        <script src="until.js"></script>
-        <script src="sanPham.js"></script>
-        <script src="gioHang.js"></script> 
-        <script src="formValidation.js"></script>
-        <link rel="stylesheet" href="css/styles.css">
-        <style>
-            .error{
-                font-size: 12px;
-                color: #f7452e;
-                line-height: 14px;
-                height: 14px;
-                margin-left: 10px;
-                font-style:  italic; 
-            }
-            .thanhtoanbtn{
-                width: 400px;
-                height: 40px;
-                margin: auto;
-                margin-left: 400px;
-                line-height: 18px;
-                border-radius: 5px;
-                border: 1px solid #ddd;
-                box-shadow: 4px 2px 2px #ddd;
-                background-color: #f7452e;
-                margin-top: -20px;
-                font-size: 16px;
-                cursor: pointer;
-            }
-            .thanhtoanbtn:hover{
-                background-color: salmon;
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Thanh toán</title>
+    <link href="css/jquery.bxslider.css" rel="stylesheet">
+    <link rel="stylesheet" href="css/cart.css">
+    <link rel="stylesheet" href="css/gioHang.css">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="fonts/fontawesome-free-5.13.0-web/css/all.min.css">
+    <script src="until.js"></script>
+    <script src="sanPham.js"></script>
+    <script src="gioHang.js"></script> 
+    <script src="formValidation.js"></script>
+    <link rel="stylesheet" href="css/styles.css">
+    <style>
+        .error{
+            font-size: 12px;
+            color: #f7452e;
+            line-height: 14px;
+            height: 14px;
+            margin-left: 10px;
+            font-style:  italic; 
+        }
+        .thanhtoanbtn{
+            width: 400px;
+            height: 40px;
+            margin: auto;
+            margin-left: 400px;
+            line-height: 18px;
+            border-radius: 5px;
+            border: 1px solid #ddd;
+            box-shadow: 4px 2px 2px #ddd;
+            background-color: #f7452e;
+            margin-top: -20px;
+            font-size: 16px;
+            cursor: pointer;
+        }
+        .thanhtoanbtn:hover{
+            background-color: salmon;
 
-            }
-        </style>
-    </head>
-    <body>
-        <header id="header">
-            <div id="noidung-header">
-                <nav class="navbartren">
-                    <ul class="noidung-navbar-tren-trai">
-                        <li class="nd1 hiennd phancachchedoc">
-                            <a href="#">Tải ứng dụng</a>
-                            <div class="qrcode">
-                                <img src="images/f184c0b68a2d385feb5d70a76396230b.png" alt="QR Code" class="qrcode_qr">
-                                <div class="qrcode_ap">
-                                    <a href="#" class="qrcode_ap_link"><img src="images/2679f513b5f9e235adf2c6c288617e7b.png" alt="Google Play"></a>
-                                    <a href="#" class="qrcode_ap_link"><img src="images/759416b55e2bd69ecc360ee2faab7ad0.png" alt="App Store"></a>
-                                </div>
+        }
+    </style>
+</head>
+<body>
+    <header id="header">
+        <div id="noidung-header">
+            <nav class="navbartren">
+                <ul class="noidung-navbar-tren-trai">
+                    <li class="nd1 hiennd phancachchedoc">
+                        <a href="#">Tải ứng dụng</a>
+                        <div class="qrcode">
+                            <img src="images/f184c0b68a2d385feb5d70a76396230b.png" alt="QR Code" class="qrcode_qr">
+                            <div class="qrcode_ap">
+                                <a href="#" class="qrcode_ap_link"><img src="images/2679f513b5f9e235adf2c6c288617e7b.png" alt="Google Play"></a>
+                                <a href="#" class="qrcode_ap_link"><img src="images/759416b55e2bd69ecc360ee2faab7ad0.png" alt="App Store"></a>
                             </div>
-                        </li>
-                        <li class="nd1">
-                            <a href="#">Kết nối</a>
-                            <a href="#"><i class="fab fa-facebook"></i></a>
-                            <a href="#"><i class="fab fa-instagram"></i></a>
-                        </li>
-                    </ul>
-                    <ul class="noidung-navbar-tren-trai">
-                        <li class="nd1 hiennd">
-                            <a href="#"><i class="fas fa-bell"></i>Thông báo</a>
-                            <div class="thongbao">
-                                <img class="thongbao-hinhanh" src="images/5a83ec8ec1bc1ea687fdf9c6e68eee0b.png" alt="">
-                                <div class="nhacnho">Đăng nhập để xem thông báo</div>
-                                <div class="dangki">
-                                    <a href="#">Đăng ký</a>
-                                </div>
-                                <div class="dangnhap">
-                                    <a href="#">Đăng nhập</a>
-                                </div>
+                        </div>
+                    </li>
+                    <li class="nd1">
+                        <a href="#">Kết nối</a>
+                        <a href="#"><i class="fab fa-facebook"></i></a>
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                    </li>
+                </ul>
+                <ul class="noidung-navbar-tren-trai">
+                    <li class="nd1 hiennd">
+                        <a href="#"><i class="fas fa-bell"></i>Thông báo</a>
+                        <div class="thongbao">
+                            <img class="thongbao-hinhanh" src="images/5a83ec8ec1bc1ea687fdf9c6e68eee0b.png" alt="">
+                            <div class="nhacnho">Đăng nhập để xem thông báo</div>
+                            <div class="dangki">
+                                <a href="#">Đăng ký</a>
                             </div>
-                        </li>                    
-                        <li class="nd1">
-                            <a href="#"><i class="far fa-question-circle"></i>Trợ giúp</a>
-                        </li>
-                        <li class="nd1 phancachchedoc"><a href="#">Đăng ký</a></li>
-                        <li class="nd1"><a href="admin.html" target="blank">Đăng nhập</a></li>
-                    </ul>
-                </nav>
-                <div class="header-logo">
-                    <a href="index.html"><img src="images/image.png" alt=""></a>
-                </div>  
-                <div class="header-giua">
-                    <div class="menu">
-                        <nav id="nav-bar">
-                            <ul class="menu-lv1">
-                                <li class="item-lv1">
-                                    <a href="index.html" class="item-lv1-title">TRANG CHỦ</a>
-                                </li>
-                                <li class="item-lv1">
-                                    <a href="#" class="item-lv1-title">SẢN PHẨM</a>
-                                    <ul class="menu-lv2">
-                                        <li class="item-lv2">
-                                            <a href="#" class="item-lv2-title">NOKIA</a>
-                                        </li>
-                                        <li class="item-lv2">
-                                            <a href="#" class="item-lv2-title">SAMSUNG</a>
-                                        </li>
-                                        <li class="item-lv2">
-                                            <a href="#" class="item-lv2-title">APPLE</a>
-                                        </li>
-                                        <li class="item-lv2">
-                                            <a href="#" class="item-lv2-title">HUAWEI</a>
-                                        </li>
-                                        <li class="item-lv2">
-                                            <a href="#" class="item-lv2-title">LG</a>
-                                        </li>
-                                        <li class="item-lv2">
-                                            <a href="#" class="item-lv2-title">SONY</a>
-                                        </li>
-                                    </ul>
-                                </li>
-                                <li class="item-lv1">
-                                    <a href="#" class="item-lv1-title">PHỤ KIỆN</a>
-                                    <ul class="menu-lv2">
-                                        <li class="item-lv2">
-                                            <a href="#" class="item-lv2-title">Điện thoại</a>
-                                        </li>
-                                        <li class="item-lv2">
-                                            <a href="#" class="item-lv2-title">Đồ gia dụng</a>
-                                        </li>
-                                    </ul>
-                                </li>
-                                <li class="item-lv1">
-                                    <a href="index.html" class="item-lv1-title">TUYỂN DỤNG</a>
-                                </li>
-                                <li class="item-lv1">
-                                    <a href="#" class="item-lv1-title">KHUYỄN MÃI</a>
-                                    <ul class="menu-lv2">
-                                        <li class="item-lv2">
-                                            <a href="#" class="item-lv2-title">NOKIA</a>
-                                        </li>
-                                        <li class="item-lv2">
-                                            <a href="#" class="item-lv2-title">SAMSUNG</a>
-                                        </li>
-                                        <li class="item-lv2">
-                                            <a href="#" class="item-lv2-title">APPLE</a>
-                                        </li>
-                                        <li class="item-lv2">
-                                            <a href="#" class="item-lv2-title">HUAWEI</a>
-                                        </li>
-                                        <li class="item-lv2">
-                                            <a href="#" class="item-lv2-title">LG</a>
-                                        </li>
-                                        <li class="item-lv2">
-                                            <a href="#" class="item-lv2-title">SONY</a>
-                                        </li>
-                                    </ul>
-                                </li>
-                            </ul>
-                        </nav>
-                    
-                    <div class="timkiem">                    
-                        <input notnull oninput="Onvaluechange()" type="text" name="Tìm kiếm" id="noidung-timkiem" class="noidung-timkiem" placeholder="Tìm kiếm trong Shop">
-                        <!--thông báo lỗi-->
-                        <label id="thongbaoLoi" for="noidung-timkiem" class="error2"></label>
-                        <select id="timkiemchon" class="btntimkiemchon">
-                            <option value="trong">Trong Shop</option>
-                            <option value="ngoai">Ngoài Shop</option>            
-                        </select>
-                        <button onclick="onclickTimKiem()" class="btn-timkiem">
-                            <i class="btn-timkiemlg fas fa-search"></i>
-                        </button>
-                    </div>   
-                </div>  
-                <div class="header-muahang">
-                    <a href="gioHang.html"><i class="fas fa-cart-arrow-down"></i></a>
-                </div> 
+                            <div class="dangnhap">
+                                <a href="#">Đăng nhập</a>
+                            </div>
+                        </div>
+                    </li>                    
+                    <li class="nd1">
+                        <a href="#"><i class="far fa-question-circle"></i>Trợ giúp</a>
+                    </li>
+                    <li class="nd1 phancachchedoc"><a onclick="nodeDangKy()">Đăng ký</a></li>
+                    <li class="nd1"><a onclick="nodeDangNhap()">Đăng nhập</a></li>
+                </ul>
+            </nav>
+            <div class="header-logo">
+                <a href="index.html"><img src="images/image.png" alt=""></a>
             </div>  
-        </header>
+            <div class="header-giua">
+                <div class="menu">
+                    <nav id="nav-bar">
+                        <ul class="menu-lv1">
+                            <li class="item-lv1 action">
+                                <a href="index.html" class="item-lv1-title">TRANG CHỦ</a>
+                            </li>
+                            <li class="item-lv1">
+                                <a href="#" class="item-lv1-title">SẢN PHẨM</a>
+                                <ul class="menu-lv2">
+                                    <li class="item-lv2">
+                                        <a href="#" class="item-lv2-title">NOKIA</a>
+                                    </li>
+                                    <li class="item-lv2">
+                                        <a href="#" class="item-lv2-title">SAMSUNG</a>
+                                    </li>
+                                    <li class="item-lv2">
+                                        <a href="#" class="item-lv2-title">APPLE</a>
+                                    </li>
+                                    <li class="item-lv2">
+                                        <a href="#" class="item-lv2-title">HUAWEI</a>
+                                    </li>
+                                    <li class="item-lv2">
+                                        <a href="#" class="item-lv2-title">LG</a>
+                                    </li>
+                                    <li class="item-lv2">
+                                        <a href="#" class="item-lv2-title">SONY</a>
+                                    </li>
+                                </ul>
+                            </li>
+                            <li class="item-lv1">
+                                <a href="#" class="item-lv1-title">PHỤ KIỆN</a>
+                                <ul class="menu-lv2">
+                                    <li class="item-lv2">
+                                        <a href="#" class="item-lv2-title">Điện thoại</a>
+                                    </li>
+                                    <li class="item-lv2">
+                                        <a href="#" class="item-lv2-title">Đồ gia dụng</a>
+                                    </li>
+                                </ul>
+                            </li>
+                            <li class="item-lv1">
+                                <a href="index.html" class="item-lv1-title">TUYỂN DỤNG</a>
+                            </li>
+                            <li class="item-lv1">
+                                <a href="#" class="item-lv1-title">KHUYỄN MÃI</a>
+                                <ul class="menu-lv2">
+                                    <li class="item-lv2">
+                                        <a href="#" class="item-lv2-title">NOKIA</a>
+                                    </li>
+                                    <li class="item-lv2">
+                                        <a href="#" class="item-lv2-title">SAMSUNG</a>
+                                    </li>
+                                    <li class="item-lv2">
+                                        <a href="#" class="item-lv2-title">APPLE</a>
+                                    </li>
+                                    <li class="item-lv2">
+                                        <a href="#" class="item-lv2-title">HUAWEI</a>
+                                    </li>
+                                    <li class="item-lv2">
+                                        <a href="#" class="item-lv2-title">LG</a>
+                                    </li>
+                                    <li class="item-lv2">
+                                        <a href="#" class="item-lv2-title">SONY</a>
+                                    </li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </nav>
+                
+                <div class="timkiem">                    
+                    <input notnull oninput="Onvaluechange()" type="text" name="Tìm kiếm" id="noidung-timkiem" class="noidung-timkiem" placeholder="Tìm kiếm trong Shop">
+                    <!--thông báo lỗi-->
+                    <label id="thongbaoLoi" for="noidung-timkiem" class="error2"></label>
+                    <select id="timkiemchon" class="btntimkiemchon">
+                        <option value="trong">Trong Shop</option>
+                        <option value="ngoai">Ngoài Shop</option>            
+                    </select>
+                    <button onclick="onclickTimKiem()" class="btn-timkiem">
+                        <i class="btn-timkiemlg fas fa-search"></i>
+                    </button>
+                </div>   
+            </div>  
+            <div class="header-muahang">
+                <a href="gioHang.html"><i class="fas fa-cart-arrow-down"></i></a>
+            </div> 
+        </div>  
+    </header>
+    
+    <main id="main-giohang" onclick="">
+        <h1 class="cart-title">
+            Sản phẩm bạn đã chọn mua
+        </h1>
+        <div class="menugiohang">
+            <div class="hinh">Hình ảnh sản phẩm</div>
+            <div class="tenspp">Tên sản phẩm</div>
+            <div class="giaspp">Giá</div>
+            <div class="soluongspp">Số lượng</div>
+            <div class="thanhtien">Tổng tiền</div>
+            <div class="thaotacxoa"></div>            
+        </div>
+        <div class="gioHang" id="gioHang">
+            <div class="item-giohang">
+                <div class="hinhanh">
+                    <img src="https://cdn.tgdd.vn/Products/Images/42/70259/iphone-6-plus-64gb-3-400x460.png" alt="">
+                </div>
+                <p class="tensp">Iphone 6</p>
+                <div class="gia">
+                    <span class="giaGoc">6000000đ</span>
+                    <span class="giaBan">5500000đ</span>
+                </div>
+                <input type="number" class="soLuong" value="1">
+                <p class="tongTien">5500000đ</p>
+                <div class="hanhDong">
+                    <i class="fas fa-trash"></i>
+                </div>
+            </div>
+        </div>
+        <div>
+            <div class="customer-info">
+                <h1 class="cart-title">THÔNG TIN KHÁCH HÀNG</h1>
+                <label for="hoten">Họ tên</label>
+                <input notnull oninput="Onvaluechange()" type="text" name="Họ tên" id="hoten">
+                <!--thông báo lỗi-->
+                <label id="thongbaoLoi" for="hoten" class="error"></label>
+
+                <label for="phonenumber">Số điện thoại</label>
+                <input notnull sodt oninput="Onvaluechange()" type="number" name="Số điện thoại" id="phonenumber">
+                <!--thông báo lỗi-->
+                <label id="thongbaoLoi" for="phonenumber" class="error"></label>
+
+                <label for="email">Email</label>
+                <input notnull email oninput="Onvaluechange()" type="email" name="Email" id="email">
+                <!--thông báo lỗi-->
+                <label id="thongbaoLoi" for="email" class="error"></label>
+
+                <label for="diachi">Địa chỉ nhận hàng</label>
+                <input notnull oninput="Onvaluechange()" type="diachi" name="Địa chỉ" id="diachi">
+                <!--thông báo lỗi-->
+                <label id="thongbaoLoi" for="diachi" class="error"></label>
+
+                <label for="ngaysinh">Ngày sinh</label>
+                <input notnull oninput="Onvaluechange()" type="date" name="Ngày sinh" id="ngaysinh">
+                <!--thông báo lỗi-->
+                <label id="thongbaoLoi" for="ngaysinh" class="error"></label>
+
+                <label for="thoigiannhanhang">Thời gian nhận hàng</label>
+                <input notnull khoanggioihan oninput="Onvaluechange()" type="number" name="Thời gian nhận hàng" id="thoigiannhanhang" min="2" max="14">
+                <!--thông báo lỗi-->
+                <label id="thongbaoLoi" for="thoigiannhanhang" class="error"></label>
+
+                <button class="thanhtoanbtn" onclick="xacNhanThanhToan()">Thanh toán</button>
+            </div>
+        </div>             
+    </main>
+    <footer id="footer">
+
+    </footer>
+
         
-        <main id="main-giohang" onclick="">
-            <h1 class="cart-title">
-                Sản phẩm bạn đã chọn mua
-            </h1>
-            <div class="menugiohang">
-                <div class="hinh">Hình ảnh sản phẩm</div>
-                <div class="tenspp">Tên sản phẩm</div>
-                <div class="giaspp">Giá</div>
-                <div class="soluongspp">Số lượng</div>
-                <div class="thanhtien">Tổng tiền</div>
-                <div class="thaotacxoa"></div>            
-            </div>
-            <div class="gioHang" id="gioHang">
-                <div class="item-giohang">
-                    <div class="hinhanh">
-                        <img src="https://cdn.tgdd.vn/Products/Images/42/70259/iphone-6-plus-64gb-3-400x460.png" alt="">
+    <!--Khung đăng nhập và đăng kí-->
+    <div id="dangKy" class="hienThiDkDn">
+        <div class="hienThiDkDn__body">
+            <!--Nội dung trong đăg kí-->
+            <div class="khung_inner">
+                <div class="khunginner__noidung">
+                    <div class="khung_inner_tren">
+                        <h3 class="heading_inner">Đăng ký</h3>
+                        <span id="chuyenDn" class="chuyenDn"  onclick="nodeDangNhap()" >Đăng nhập</span>
                     </div>
-                    <p class="tensp">Iphone 6</p>
-                    <div class="gia">
-                        <span class="giaGoc">6000000đ</span>
-                        <span class="giaBan">5500000đ</span>
+                    <div class="khunginner_phan2">
+                        <div class="nhominput">
+                            <input type="text"class="khunginner__input" placeholder="Số điện thoại/Email/Tên Đăng ký">
+                        </div>
+                        <div class="nhominput">
+                            <input type="password"class="khunginner__input" placeholder="Mật khẩu của bạn">
+                        </div>
+                        <div class="nhominput">
+                            <input type="password"class="khunginner__input" placeholder="Nhập lại mật khẩu">
+                        </div>
                     </div>
-                    <input type="number" class="soLuong" value="1">
-                    <p class="tongTien">5500000đ</p>
-                    <div class="hanhDong">
-                        <i class="fas fa-trash"></i>
+                    <div class="khunginner_phan3">
+                        <p class="chuChinhSachText">
+                            Bằng việc đăng kí, bạn đã đồng ý với ShopSale về
+                            <a href="" class="LinkDieuKhoan">Điều khoản dịch vụ</a> &
+                            <a href="" class="LinkDieuKhoan">Chính sách bảo mật</a>
+                        </p>
+                    </div>
+                    <div class="nutDieuKhien">
+                        <button onclick="anDangKy()" class="bttrtn">TRỞ LẠI</button>
+                        <button class="btn-chinh">ĐĂNG KÝ</button>
                     </div>
                 </div>
-            </div>
-            <div>
-                <div class="customer-info">
-                    <h1 class="cart-title">THÔNG TIN KHÁCH HÀNG</h1>
-                    <label for="hoten">Họ tên</label>
-                    <input notnull oninput="Onvaluechange()" type="text" name="Họ tên" id="hoten">
-                    <!--thông báo lỗi-->
-                    <label id="thongbaoLoi" for="hoten" class="error"></label>
-
-                    <label for="phonenumber">Số điện thoại</label>
-                    <input notnull sodt oninput="Onvaluechange()" type="number" name="Số điện thoại" id="phonenumber">
-                    <!--thông báo lỗi-->
-                    <label id="thongbaoLoi" for="phonenumber" class="error"></label>
-
-                    <label for="email">Email</label>
-                    <input notnull email oninput="Onvaluechange()" type="email" name="Email" id="email">
-                    <!--thông báo lỗi-->
-                    <label id="thongbaoLoi" for="email" class="error"></label>
-
-                    <label for="diachi">Địa chỉ nhận hàng</label>
-                    <input notnull oninput="Onvaluechange()" type="diachi" name="Địa chỉ" id="diachi">
-                    <!--thông báo lỗi-->
-                    <label id="thongbaoLoi" for="diachi" class="error"></label>
-
-                    <label for="ngaysinh">Ngày sinh</label>
-                    <input notnull oninput="Onvaluechange()" type="date" name="Ngày sinh" id="ngaysinh">
-                    <!--thông báo lỗi-->
-                    <label id="thongbaoLoi" for="ngaysinh" class="error"></label>
-
-                    <label for="thoigiannhanhang">Thời gian nhận hàng</label>
-                    <input notnull khoanggioihan oninput="Onvaluechange()" type="number" name="Thời gian nhận hàng" id="thoigiannhanhang" min="2" max="14">
-                    <!--thông báo lỗi-->
-                    <label id="thongbaoLoi" for="thoigiannhanhang" class="error"></label>
-
-                    <button class="thanhtoanbtn" onclick="xacNhanThanhToan()">Thanh toán</button>
+                <div class="khungMxh">
+                    <img class="mxhKhung" src="images/facebook.png" alt="">
+                    <img class="mxhKhung" src="images/google.png" alt="">
                 </div>
-            </div>             
-        </main>
-        <footer id="footer">
+            </div>
+        </div> 
+    </div>   
+    <div id="dangNhap" class="hienThiDkDnh">
+        <div class="hienThiDkDn__body">
+            <!--Nội dung trong đăg nhập-->
+            <div class="khung_inner">
+                <div class="khunginner__noidung">
+                    <div class="khung_inner_tren">
+                        <h3 class="heading_inner">Đăng nhập</h3>
+                        <span class="chuyenDn" onclick="nodeDangKy()">Đăng ký</span>
+                    </div>
+                    <div class="khunginner_phan2">
+                        <div class="nhominput">
+                            <input type="text"class="khunginner__input" placeholder="Số điện thoại/Email/Tên Đăng ký">
+                        </div>
+                        <div class="nhominput">
+                            <input type="password"class="khunginner__input" placeholder="Mật khẩu của bạn">
+                        </div>
+                    </div>
+                    <div class="khunginner_phan3">
+                        <div class="quenMk">
+                            <a href="" class="quenMkLink">Quên mật khẩu</a>
+                            <a href="" class="quenMkLink2">Cần trợ giúp?</a>
+                        </div>
+                        
+                    </div>
+                    <div class="nutDieuKhien">
+                        <button onclick="anDangNhap()" class="bttrtn">TRỞ LẠI</button>
+                        <button class="btn-chinh">ĐĂNG NHẬP</button>
+                    </div>
+                </div>
+                <div class="khungMxh">
+                    <img class="mxhKhung" src="images/facebook.png" alt="">
+                    <img class="mxhKhung" src="images/google.png" alt="">
+                </div>
+            </div>
+        </div>
+    </div> 
 
-        </footer>
-        <script>
+
+
+    <script>
+        
+        hienThiDanhSachItemGioHang();
+        function xacNhanThanhToan(){
             
-            hienThiDanhSachItemGioHang();
-            function xacNhanThanhToan(){
-                
-                console.log('Gọi hàm Thanh toán')
-                var nodeCha = event.target.parentElement;
-                if(!ktraHopLe(nodeCha)){
-                    return 
-                    
-                }
-                alert('Thanh toán thành công!') ;     
+            console.log('Gọi hàm Thanh toán')
+            var nodeCha = event.target.parentElement;
+            if(!ktraHopLe(nodeCha)){
+                return 
                 
             }
-            function hienThiDanhSachItemGioHang(){
-                var danhSachItemGioHang = layGioHangTuLCS();
-                var HTML = chuyenDanhSachItemGioHangSangHTML(danhSachItemGioHang);
-                
-                var nodeGioHang = document.getElementById('gioHang');
-                nodeGioHang.innerHTML =  HTML;
+            alert('Thanh toán thành công!') ;     
+            
+        }
+        function hienThiDanhSachItemGioHang(){
+            var danhSachItemGioHang = layGioHangTuLCS();
+            var HTML = chuyenDanhSachItemGioHangSangHTML(danhSachItemGioHang);
+            
+            var nodeGioHang = document.getElementById('gioHang');
+            nodeGioHang.innerHTML =  HTML;
+        }
+        function chuyenDanhSachItemGioHangSangHTML(danhSachItemGioHang){
+            var htmlTong = '';
+            for(var i = 0; i < danhSachItemGioHang.length; i++){
+                htmlTong = htmlTong + chuyenDoiTuongItemGioHangSangHTML(danhSachItemGioHang[i]);
             }
-            function chuyenDanhSachItemGioHangSangHTML(danhSachItemGioHang){
-                var htmlTong = '';
-                for(var i = 0; i < danhSachItemGioHang.length; i++){
-                    htmlTong = htmlTong + chuyenDoiTuongItemGioHangSangHTML(danhSachItemGioHang[i]);
-                }
-                return htmlTong;
+            return htmlTong;
+        }
+        function chuyenDoiTuongItemGioHangSangHTML(itemGioHang){
+            var sanPham = laySanPhamTheoId(itemGioHang.idSanPham);
+            console.log(sanPham);
+            var tongTien = ((sanPham.tinhGiaBan())*itemGioHang.soLuong);
+            var html =  '   <div id="itemhang" class="item-giohang">  '  + 
+                '                <div class="hinhanh">  '  + 
+                '                    <img src="'+ sanPham.hinhAnh +'" alt="">  '  + 
+                '                </div>  '  + 
+                '                <p class="tensp">'+ sanPham.ten +'</p>  '  + 
+                '                <div class="gia">  '  + 
+                '                    <span class="giaGoc">'+ themChamVaoSo(sanPham.giaGoc) +' đ</span>  '  + 
+                '                    <span class="giaBan">'+ themChamVaoSo(sanPham.tinhGiaBan()) +' đ</span>  '  + 
+                '                </div>  '  + 
+                '                <input type="number" oninput="tinhTienSanPham('+itemGioHang.idSanPham+')" class="soLuong" value="'+ itemGioHang.soLuong +'">  '  + 
+                '                <p class="tongTien">'+ themChamVaoSo(tongTien) +'đ</p>  '  + 
+                '                <div class="hanhDong">  '  + 
+                '                    <i class="fas fa-trash" onclick="onClickNutXoa('+"\'"+itemGioHang.idSanPham+"\'"+')"></i>  '  + 
+                '                </div>  '  + 
+                '           </div>  ' ; 
+            return html;   
+        }
+        //Xoá sp
+        function xoaSanPham(){
+            var child = document.getElementById('itemhang');
+            child.parentNode.removeChild(child);  
+        }
+        function onClickNutXoa(id) {
+            // Xóa node hiển thị
+            let nodeSanPham = event.target.parentElement;
+            console.log(nodeSanPham.parentElement);
+            nodeSanPham.parentElement.remove();
+            // Xóa data
+            let dataGioHang = layGioHangTuLCS("gioHang");
+            let vitri = dataGioHang.findIndex(sp => sp.idSanPham == id);
+            console.log(dataGioHang[vitri]);
+            dataGioHang.splice(vitri, 1);
+            luuDanhSachItemGioHangVaoLCS(dataGioHang, "gioHang");
+            //tính tổng tiền
+            // Tính lại tổng tiền
+            let nodeTongTien = document.getElementById("tongTien");
+            nodeTongTien.innerHTML = themChamVaoSo(tinhThanhTien(dataGioHang)) + " đ";            
+        }
+        function tinhThanhTien(dataGioHang){
+            let dataSanPham = layGioHangTuLCS('danhSachSanPham');
+            let tongTien = 0;
+            for(var i=0; i<dataGioHang.length; i++){
+                let idSanPham = dataGioHang[i].id;
+                let soLuong = dataGioHang[i].soLuong;
+                let sanPham = dataSanPham.find(sp => sp.id == idSanPham);
+                let giaBan = tinhGiaBan(sanPham.giaGoc, sanPham.phanTramGiamGia);
+                tongTien += giaBan * soLuong;
             }
-            function chuyenDoiTuongItemGioHangSangHTML(itemGioHang){
-                var sanPham = laySanPhamTheoId(itemGioHang.idSanPham);
-                console.log(sanPham);
-                var tongTien = ((sanPham.tinhGiaBan())*itemGioHang.soLuong);
-                var html =  '   <div id="itemhang" class="item-giohang">  '  + 
-                    '                <div class="hinhanh">  '  + 
-                    '                    <img src="'+ sanPham.hinhAnh +'" alt="">  '  + 
-                    '                </div>  '  + 
-                    '                <p class="tensp">'+ sanPham.ten +'</p>  '  + 
-                    '                <div class="gia">  '  + 
-                    '                    <span class="giaGoc">'+ themChamVaoSo(sanPham.giaGoc) +' đ</span>  '  + 
-                    '                    <span class="giaBan">'+ themChamVaoSo(sanPham.tinhGiaBan()) +' đ</span>  '  + 
-                    '                </div>  '  + 
-                    '                <input type="number" oninput="tinhTienSanPham('+itemGioHang.idSanPham+')" class="soLuong" value="'+ itemGioHang.soLuong +'">  '  + 
-                    '                <p class="tongTien">'+ themChamVaoSo(tongTien) +'đ</p>  '  + 
-                    '                <div class="hanhDong">  '  + 
-                    '                    <i class="fas fa-trash" onclick="onClickNutXoa('+"\'"+itemGioHang.idSanPham+"\'"+')"></i>  '  + 
-                    '                </div>  '  + 
-                    '           </div>  ' ; 
-                return html;   
-            }
-            //Xoá sp
-            function xoaSanPham(){
-                var child = document.getElementById('itemhang');
-                child.parentNode.removeChild(child);  
-            }
-            function onClickNutXoa(id) {
-                // Xóa node hiển thị
-                let nodeSanPham = event.target.parentElement;
-                console.log(nodeSanPham.parentElement);
-                nodeSanPham.parentElement.remove();
-                // Xóa data
-                let dataGioHang = layGioHangTuLCS("gioHang");
-                let vitri = dataGioHang.findIndex(sp => sp.idSanPham == id);
-                console.log(dataGioHang[vitri]);
-                dataGioHang.splice(vitri, 1);
-                luuDanhSachItemGioHangVaoLCS(dataGioHang, "gioHang");
-                //tính tổng tiền
-                // Tính lại tổng tiền
-                let nodeTongTien = document.getElementById("tongTien");
-                nodeTongTien.innerHTML = themChamVaoSo(tinhThanhTien(dataGioHang)) + " đ";            
-            }
-            function tinhThanhTien(dataGioHang){
-                let dataSanPham = layGioHangTuLCS('danhSachSanPham');
-                let tongTien = 0;
-                for(var i=0; i<dataGioHang.length; i++){
-                    let idSanPham = dataGioHang[i].id;
-                    let soLuong = dataGioHang[i].soLuong;
-                    let sanPham = dataSanPham.find(sp => sp.id == idSanPham);
-                    let giaBan = tinhGiaBan(sanPham.giaGoc, sanPham.phanTramGiamGia);
-                    tongTien += giaBan * soLuong;
-                }
-                return tongTien;
+            return tongTien;
 
-            }
-            function tinhTienSanPham(idSanPham){
+        }
+        function tinhTienSanPham(idSanPham){
 
-            }
-        </script>
-    </body>
+        }
+    </script>
+</body>
 </html>

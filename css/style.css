@@ -31,6 +31,7 @@ body{
     display: inline-block;
     margin: 10px 10px 0px;
     position: relative; 
+    cursor: pointer;
 }
 .nd1 a{
     font-size: 14px;
@@ -66,10 +67,13 @@ body{
     width: 168px;
     position: absolute;
     left: 0;
-    top: 100%;
+    top: 90%;
+    margin-top: 10px;
     padding: 8px;
     border-radius: 2px;
     display: none;
+    cursor: pointer;    
+    animation: fadeIn ease-in 0.4s;
 }
 .qrcode::before{
     content: "";
@@ -77,7 +81,7 @@ body{
     border-color: transparent transparent white transparent;
     position: absolute;
     left: 12px;
-    top: -25px;
+    top: -30px;
 }
 .qrcode img{
     width: 100%;
@@ -111,11 +115,13 @@ body{
     position: absolute;
     left: 0;
     top: 100%;
+    margin-top: 10px;
     padding: 8px;
     border-radius: 4px;
     display: none;
     transform-origin: 90% top;
-    animation: thongbaohien ease-in 0.25s;
+    animation: fadeInPhong ease-in 0.3s;
+    will-change: opacity, transform;
     z-index: 40;
 }
 .thongbao::before{
@@ -123,8 +129,8 @@ body{
     border: 20px solid white;
     border-color: transparent transparent white transparent;
     position: absolute;
-    right: 12px;
-    top: -25px;
+    right: 10px;
+    top: -30px;
 }
 @keyframes thongbaohien{
     from{
@@ -722,4 +728,155 @@ i.item-khuVuc-like-fill{
     margin-top: 30px;
     display: inline-block;
     background-image: linear-gradient(0, #fe6433, #f53e2d );
+}
+/*======Hiển thị đăng kí đăng nhập=======*/
+.hienThiDkDn{
+    position: fixed;
+    width: 100vw;
+    height: 100vh;
+    animation: fadeIn linear 0.4s;
+    display: none;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    top: 0;    
+    background-color: rgb(0,0,0,0.4);
+}
+.hienThiDkDnh{
+    position: fixed;
+    width: 100vw;
+    height: 100vh;
+    animation: fadeIn linear 0.4s;
+    display: none;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    top: 0;    
+    background-color: rgb(0,0,0,0.4);
+}
+.hienThiDkDn__body{
+    --growth-from: 0.7;
+    --growth-to: 1;
+    background-color: white;
+    margin: auto;
+    position: relative;
+    border-radius: 5px;
+    z-index: 1;
+    overflow: hidden;
+    animation: growth linear 0.2s;
+}
+.khung_inner{
+    width: 500px;
+}
+.khunginner__noidung{
+    padding: 0 30px;
+}
+.khung_inner_tren{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-top: 20px;
+    padding-bottom: 20px;
+}
+.heading_inner{
+    font-size: 22px;
+    font-weight: 400;
+    color: black;
+}
+.heading_inner .hienThiDkDn{
+    display: block;
+}
+.chuyenDn{
+    font-size: 16px;
+    font-weight: 400;
+    color: var(--primary-color);
+    cursor: pointer;
+}
+.khunginner__input{
+    width: 100%;
+    height: 40px;
+    margin-top: 16px;
+    padding: 0 12px;
+    font-size: 14px;
+    cursor: pointer;
+    border-radius: 5px;
+    border: 1px solid #bdbdbd;
+    outline: none;
+}
+.khunginner__input:focus{
+    border-color: #888;
+}
+.khunginner_phan3{
+    margin-top: 30px;
+}
+.chuChinhSachText{
+    font-size: 14px;
+    line-height: 16px;
+    text-align: center;
+}
+.LinkDieuKhoan{
+    color: var(--primary-color);
+}
+.nutDieuKhien{
+    margin-top: 80px;
+    padding-bottom: 20px;
+    margin-left: 150px;
+}
+.bttrtn{
+    min-width: 140px;
+    height: 36px;
+    background-color: #fff;
+    border-radius: 5px;
+    cursor: pointer;
+    border: 1px solid #fff;
+    outline: none;
+    text-align: center;
+}
+.bttrtn:hover{
+    background-color:rgba(0, 0, 0, 0.05);
+}
+.btn-chinh{
+    min-width: 140px;
+    height: 36px;
+    background-color: var(--primary-light-color);
+    border-radius: 5px;
+    cursor: pointer;
+    border: 1px solid var(--primary-light-color);
+    outline: none; 
+    text-align: center;
+    color: #fff;
+}
+.btn-chinh:hover{
+    background-color: var(--primary-dark-color);
+}
+.khungMxh{
+    width: 100%;
+    height: 42px;
+    background-color: #f5f5f5;
+    display: flex;
+}
+.mxhKhung{
+    width: 230px;
+    height: 35px;
+    margin-left: 12px;
+    cursor: pointer;
+    margin-top: 3px;
+    box-shadow: 5px;
+    opacity: 0.7;
+}
+.mxhKhung:hover{
+    opacity: 1;
+}
+.quenMk{
+    display: flex;
+    justify-content: space-between;
+}
+.quenMkLink{
+    color: var(--primary-color);
+}
+.quenMkLink:hover{
+    text-decoration: underline;
+}
+.quenMkLink2:hover{
+    text-decoration: underline;
 }
