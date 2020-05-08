@@ -331,6 +331,58 @@ body{
     color: #ddd;
     margin-left: 8px;
 }
+.btntimkiemchon{
+    width: 100px;
+    background-color: #fff;
+}
+.btntimkiemchon .in1{
+    height: 40px;
+    width: 100%;
+    border-radius: 4px;
+}
+/*=========LỊCH SỬ===========*/
+.timkiem_lichsu{
+    position: absolute;
+    width: 550px;
+    top: 100%;
+    margin-top: -493px;
+    background-color: #fff;
+    z-index: 8;
+    border-radius: 4px;
+    box-shadow: 0px 1px 5px #ccc;
+    display: none;
+}
+.timkiem_lichsu_head{
+    color: #ccc;
+    font-weight: normal;
+    font-size: 16px;
+    margin-left: 10px;
+    line-height: 30px;
+}
+.timkiem_lichsu__danhsach{
+    line-height: 35px;
+    font-size: 16px;
+    cursor: pointer;
+}
+.timkiem_lichsu__danhsach a{
+    margin-left: 10px;
+    color: #222;
+}
+.timkiem_lichsu__danhsach:hover{
+    background-color: #ccc;
+}
+.timkiem_lichsu__danhsach:first-child:hover{
+    border-top-left-radius: 4px;
+    border-top-right-radius: 4px;
+}
+.timkiem_lichsu__danhsach:last-child:hover{
+    border-bottom-left-radius: 4px;
+    border-bottom-right-radius: 4px;
+}
+.noidung-timkiem:focus ~ .timkiem_lichsu{
+    display: block;
+
+}
 /*=========NAV BAR===========*/
 #nav-bar{
     display: flex;
@@ -636,8 +688,14 @@ body{
     padding: 20px;
     border-radius: 5px;
     background-color: #fff;
+    display: block;
+    cursor: pointer;
+    transition: transform linear 0.1s;
 }
-
+#products .items .item:hover{
+    transform: translateY(-2px);
+    box-shadow: 0 1px 20px 0 rgba(0, 0, 0, 0.05);
+}
 #products .items .item .item-hinhAnh{
     width: 20%;
     height: 200px;
@@ -723,15 +781,151 @@ i.item-khuVuc-like-fill{
 .zoom:hover {
     transform: scale(1.1); /* (110% zoom - Note: if the zoom is too large, it will go outside of the viewport) */
 }
+.item .item-phanTramGiamGia{
+    position: absolute;
+    margin-top: -320px;
+    margin-left: 167px;
+    width: 40px;
+    height: 40px;
+    background-color: rgba(255, 216, 64, 1);
+    text-align: center;
+    cursor: pointer;
+}
+.item .item-phanTramGiamGia::after{
+    content: '';
+    position: absolute;
+    margin-top: 3px;
+    margin-left: -20px;
+    border-width: 0 20px 6px;
+    border-style: solid;
+    border-color: transparent rgba(255, 216, 64, 1) transparent rgba(255, 216, 64, 1);
+}
+.giamGiaPhanTram{
+    color: red;
+    font-weight: bold;
+    font-size: 15px;
+    line-height: 17px;
+    margin-top: 3px;
+}
+.giamGiaPhanTram_Sale{
+    color: #222;
+    font-size: 12px;
+    line-height: 15px;
+    font-weight: bold;
+    letter-spacing: -1px;
+    margin-top: 2px;
+}
+.item .item-phanTramGiamGia:hover{
+    transform: scale(1.1);
+}
+.item-tenShopSale{
+    position: absolute;
+    margin-top: -319px;
+    margin-left: -29px;
+    background-color: var(--primary-color);
+    width: 87px;
+    height: 20px;
+    color: #fff;
+    font-size: 14px;
+    display: flex;
+    align-items: center;
+    border-top-right-radius: 4px;
+    border-bottom-right-radius: 4px;
+}
+.item-tenShopSale::after{
+    content: "";
+    border-width: 0 8px 10px;
+    margin-left: -90px;
+    margin-top: 27px;
+    border-style: solid;
+    border-color: transparent var(--primary-color) transparent transparent;
 
+}
+.logoNen{
+    width: 20px;
+    height: 20px;
+    margin-left: 5px;
+}
+.tenShop_Sale{
+    margin-left: 5px;
+    margin-top: 2px;
+}
 /*===========FOOTER===========*/
 #footer{
     width: 100%;
-    height: 80px;
     margin-top: 30px;
     display: inline-block;
     background-image: linear-gradient(0, #fe6433, #f53e2d );
 }
+#footer .footer_noiDung{
+    width: 1200px;
+    margin: auto;
+    border-top: 1px solid #ccc;
+    border-bottom: 1px solid rgb(252, 251, 251);
+    display: flex;
+    justify-content: space-between;
+}
+.footer_noiDung_nd1{
+    width: 180px;
+}
+.footer_noiDung_header{
+    color: #ccc;
+    text-align: center;
+    margin-top: 30px;
+    font-size: 11px;
+    line-height: 16px;
+}
+.footer_noiDung_nd2{
+    width: 250px;
+}
+.footer_noiDung_nd3{
+    width: 240px;
+}
+.footer_noiDung_nd3a{
+    height: 210px;
+}
+.footer_noiDung_nd4{
+    width: 190px;
+}
+.footer_noiDung_nd5{
+    width: 250px;
+    margin-left: 10px;
+}
+
+.chamsoc_noidung{
+    list-style: none;
+    margin-top: 6px;
+    color: #f5f5f5;
+    cursor: pointer;
+}
+.ndcskh{
+    line-height: 30px;
+}
+.ndcskh:hover{
+    color: #222;
+}
+.shopsale_noidung{
+    list-style: none;
+    margin-top: 6px;
+    margin-left: 70px;
+    color: #f5f5f5;
+    cursor: pointer;
+}
+.theodoi_noidung{
+    list-style: none;
+    margin-left: 30px;
+    margin-top: 6px;
+    color: #f5f5f5;
+    cursor: pointer;
+}
+.qrtai{
+    width: 80px;
+    height: 80px;
+    border: 1px solid #ddd;
+    margin-top: 10px;
+}
+.lienketcungqr
+.qr_ap_link
 /*======Hiển thị đăng kí đăng nhập=======*/
 .hienThiDkDn{
     position: fixed;

@@ -93,7 +93,7 @@
                 <div class="menu">
                     <nav id="nav-bar">
                         <ul class="menu-lv1">
-                            <li class="item-lv1 action">
+                            <li class="item-lv1">
                                 <a href="index.html" class="item-lv1-title">TRANG CHỦ</a>
                             </li>
                             <li class="item-lv1">
@@ -159,13 +159,30 @@
                         </ul>
                     </nav>
                 
-                <div class="timkiem">                    
+                <div class="timkiem">                   
                     <input notnull oninput="Onvaluechange()" type="text" name="Tìm kiếm" id="noidung-timkiem" class="noidung-timkiem" placeholder="Tìm kiếm trong Shop">
                     <!--thông báo lỗi-->
                     <label id="thongbaoLoi" for="noidung-timkiem" class="error2"></label>
+                    <div class="timkiem_lichsu">
+                        <h3 class="timkiem_lichsu_head">Lịch sử Tìm kiếm</h3>
+                        <ul class="timkiem_lichsu_list">
+                            <li class="timkiem_lichsu__danhsach">
+                                <a href="#">Điện thoại SamSung giá rẻ</a>
+                            </li>
+                            <li class="timkiem_lichsu__danhsach">
+                                <a href="#">Điện thoại giá rẻ</a>
+                            </li>
+                            <li class="timkiem_lichsu__danhsach">
+                                <a href="#">Điện thoại Iphone</a>
+                            </li>
+                            <li class="timkiem_lichsu__danhsach">
+                                <a href="#">Thầy Hiếu đẹp trai nhất FPT Tây Nguyên</a>
+                            </li>
+                        </ul>
+                    </div>
                     <select id="timkiemchon" class="btntimkiemchon">
-                        <option value="trong">Trong Shop</option>
-                        <option value="ngoai">Ngoài Shop</option>            
+                        <option class="in1" value="trong">Trong Shop</option>
+                        <option class="in1" value="ngoai">Ngoài Shop</option>            
                     </select>
                     <button onclick="onclickTimKiem()" class="btn-timkiem">
                         <i class="btn-timkiemlg fas fa-search"></i>

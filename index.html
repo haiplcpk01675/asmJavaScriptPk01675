@@ -158,13 +158,30 @@
                         </ul>
                     </nav>
                 
-                <div class="timkiem">                    
+                <div class="timkiem">                   
                     <input notnull oninput="Onvaluechange()" type="text" name="Tìm kiếm" id="noidung-timkiem" class="noidung-timkiem" placeholder="Tìm kiếm trong Shop">
                     <!--thông báo lỗi-->
                     <label id="thongbaoLoi" for="noidung-timkiem" class="error2"></label>
+                    <div class="timkiem_lichsu">
+                        <h3 class="timkiem_lichsu_head">Lịch sử Tìm kiếm</h3>
+                        <ul class="timkiem_lichsu_list">
+                            <li class="timkiem_lichsu__danhsach">
+                                <a href="#">Điện thoại SamSung giá rẻ</a>
+                            </li>
+                            <li class="timkiem_lichsu__danhsach">
+                                <a href="#">Điện thoại giá rẻ</a>
+                            </li>
+                            <li class="timkiem_lichsu__danhsach">
+                                <a href="#">Điện thoại Iphone</a>
+                            </li>
+                            <li class="timkiem_lichsu__danhsach">
+                                <a href="#">Thầy Hiếu đẹp trai nhất FPT Tây Nguyên</a>
+                            </li>
+                        </ul>
+                    </div>
                     <select id="timkiemchon" class="btntimkiemchon">
-                        <option value="trong">Trong Shop</option>
-                        <option value="ngoai">Ngoài Shop</option>            
+                        <option class="in1" value="trong">Trong Shop</option>
+                        <option class="in1" value="ngoai">Ngoài Shop</option>            
                     </select>
                     <button onclick="onclickTimKiem()" class="btn-timkiem">
                         <i class="btn-timkiemlg fas fa-search"></i>
@@ -284,7 +301,70 @@
         </div>        
     </main>
     <footer id="footer">
-
+        <div class="footer_noiDung">
+            <div class="footer_noiDung_nd1">
+                <div class="footer_noiDung_header">
+                    <h3>CHĂM SÓC KHÁCH HÀNG</h3>
+                </div>
+                <div class="chamsoc_noidung">
+                    <li class="ndcskh">Trung tâm trợ giúp</li>
+                    <li class="ndcskh">ShopSale Mail</li>
+                    <li class="ndcskh">ShopSale Blog</li>
+                    <li class="ndcskh">Hưỡng dẫn mua hàng</li>
+                    <li class="ndcskh">Vận chuyển</li>
+                    <li class="ndcskh">Trả hàng & Hoàn tiền</li>
+                    <li class="ndcskh">ShopSale xu</li>
+                    <li class="ndcskh">Chính sách bảo hành</li>
+                    <li class="ndcskh">Chăm sóc khách hàng</li>
+                </div>
+            </div>
+            <div class="footer_noiDung_nd2">
+                <div class="footer_noiDung_header">
+                    <h3>VỀ SHOPSALE</h3>
+                </div>
+                <div class="shopsale_noidung">
+                    <li class="ndcskh">Giới thiệu về ShopSale</li>
+                    <li class="ndcskh">Tuyển dụng</li>
+                    <li class="ndcskh">Điều khoản ShopSale</li>
+                    <li class="ndcskh">Chánh sách bảo mật</li>
+                    <li class="ndcskh">Flash Sales</li>
+                    <li class="ndcskh">Chương trình tiếp thị</li>
+                </div>
+            </div>
+            <div class="footer_noiDung_nd3">
+                <div class="footer_noiDung_nd3a">
+                    <div class="footer_noiDung_header">
+                        <h3>ĐƠN VỊ VẬN CHUYỂN</h3>
+                    </div>
+                </div>
+                <div class="footer_noiDung_nd3b">
+                    <div class="footer_noiDung_header">
+                        <h3>THANH TOÁN</h3>
+                    </div>
+                </div>                
+            </div>
+            <div class="footer_noiDung_nd4">
+                <div class="footer_noiDung_header">
+                    <h3>THEO DÕI CHÚNG TÔI TRÊN</h3>
+                </div>
+                <div class="theodoi_noidung">
+                    <li class="ndcskh"><i class="fab fa-facebook"></i> Facebook</li>
+                    <li class="ndcskh"><i class="fab fa-instagram-square"></i> Instagram</li>
+                </div>
+            </div>
+            <div class="footer_noiDung_nd5">
+                <div class="footer_noiDung_header">
+                    <h3>TẢI ỨNG DỤNG SHOPSALE NGAY THÔI</h3>
+                </div>
+                <div class="qrtai">
+                    <img src="images/f184c0b68a2d385feb5d70a76396230b.png" alt="">
+                </div>
+                <div class="lienketcungqr">
+                    <a href="#" class="qr_ap_link"><img src="images/2679f513b5f9e235adf2c6c288617e7b.png" alt="Google Play"></a>
+                    <a href="#" class="qr_ap_link"><img src="images/759416b55e2bd69ecc360ee2faab7ad0.png" alt="App Store"></a>
+                </div>
+            </div>
+        </div>
     </footer>
 
 
