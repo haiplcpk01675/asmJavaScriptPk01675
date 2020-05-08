@@ -602,13 +602,11 @@
             if(cachSapXep = 'tangDan'){
                 danhSachSanPhamSX.sort((a,b)=> (a.tinhGiaBan())>(b.tinhGiaBan()));
                 console.log(danhSachSanPhamSX);
-                break;
             }
 
             if(cachSapXep = 'giamDan'){
                 danhSachSanPhamSX.sort((a,b)=> (a.tinhGiaBan())<(b.tinhGiaBan()));
                 console.log(danhSachSanPhamSX);
-                break;
             }
             html = chuyenDanhSachDoiTuongSanPhamThanhHTML(danhSachSanPhamSX);
             nodeProducts = document.getElementById('products');
