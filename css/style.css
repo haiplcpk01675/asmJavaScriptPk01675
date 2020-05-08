@@ -6,6 +6,9 @@
 body{
     background-color: rgb(252, 239, 239);
 }
+img{
+    width: 100%;
+}
 :root{
     --primary-color: #f7452e;
     --primary-dark-color: #c53724;
@@ -869,20 +872,24 @@ i.item-khuVuc-like-fill{
     width: 180px;
 }
 .footer_noiDung_header{
-    color: #ccc;
+    color: #FFF;
     text-align: center;
     margin-top: 40px;
     font-size: 11px;
     line-height: 16px;
 }
+.footer_noiDung_header img{
+    border-radius: 5px;
+    margin-top: -20px;
+}
 .footer_noiDung_nd2{
     width: 250px;
 }
 .footer_noiDung_nd3{
-    width: 240px;
+    width: 220px;
 }
 .footer_noiDung_nd3a{
-    height: 210px;
+    height: 150px;
 }
 .footer_noiDung_nd4{
     width: 190px;
@@ -903,7 +910,7 @@ i.item-khuVuc-like-fill{
     line-height: 30px;
 }
 .ndcskh:hover{
-    color: #222;
+    color: orange;
 }
 .shopsale_noidung{
     list-style: none;
@@ -923,7 +930,7 @@ i.item-khuVuc-like-fill{
 .qrtai{
     width: 80px;
     height: 80px;
-    border: 2px solid #222;
+    border: 2px solid orange;
     margin-top: 10px;
     margin-left: 10px;
     cursor: pointer;
@@ -934,6 +941,47 @@ i.item-khuVuc-like-fill{
     margin-top: -70px;
     margin-right: 10px;
 }
+.cacnganhang{
+    width: 100%;
+    display: block;
+}
+.cacnganhg{
+    width: 70px;
+    height: 50px;
+    margin-top: 15px;
+    padding: 0px 5px;
+    float: left;
+    border-radius: 5px;
+    cursor: pointer;
+}
+.cacnganhg:hover{
+    transform: scale(1.1);
+}
+.noidung2{
+    width: 1200px;
+    margin: auto;
+    border-bottom: 1px solid #fff;
+    height: 80px;
+    text-align: center;
+    line-height: 80px;
+    font-size: 16px;
+    color: #fff;
+}
+.nuoc:hover{
+    color: orange;
+    cursor: pointer;
+}
+.diachishop{
+    width: 1200px;
+    margin: auto;
+    text-align: center;
+    line-height: 30px;
+    color: #f5f5f5;
+}
+
+
+
+
 /*======Hiển thị đăng kí đăng nhập=======*/
 .hienThiDkDn{
     position: fixed;
