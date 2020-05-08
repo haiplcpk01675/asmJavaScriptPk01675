@@ -290,8 +290,8 @@
 
                 <select id="sap-xep" class="btn" onchange="sapXepSanPham()">
                     <option value=""selected>Giá</option>
-                    <option value="giamDan">Giá giảm dần</option>
-                    <option value="tangDan">Giá tăng dần</option>            
+                    <option value="tangDan">Giá tăng dần</option>
+                    <option value="giamDan">Giá giảm dần</option>            
                 </select>
                 <div class="hom-filter_page">
                     <span class="hom-filter_page-num">
@@ -602,11 +602,13 @@
             if(cachSapXep = 'giamDan'){
                 danhSachSanPhamSX.sort((a,b)=> (a.tinhGiaBan())>(b.tinhGiaBan()));
                 console.log(danhSachSanPhamSX);
+                break;
             }
 
             if(cachSapXep = 'tangDan'){
                 danhSachSanPhamSX.sort((a,b)=> (a.tinhGiaBan())<(b.tinhGiaBan()));
                 console.log(danhSachSanPhamSX);
+                break;
             }
             html = chuyenDanhSachDoiTuongSanPhamThanhHTML(danhSachSanPhamSX);
             nodeProducts = document.getElementById('products');
