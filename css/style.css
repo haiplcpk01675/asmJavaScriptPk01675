@@ -982,6 +982,17 @@ i.item-khuVuc-like-fill{
 
 
 
+
+
+
+
+
+
+
+
+
+
+
 /*======Hiển thị đăng kí đăng nhập=======*/
 .hienThiDkDn{
     position: fixed;
@@ -1133,4 +1144,7 @@ i.item-khuVuc-like-fill{
 }
 .quenMkLink2:hover{
     text-decoration: underline;
+}
+#main-giohang{
+    width: 1200px;
 }
