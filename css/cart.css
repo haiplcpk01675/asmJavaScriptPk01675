@@ -1,101 +1,25 @@
 #main-giohang{
     width: 1200px;
     margin: auto;
-    margin-top: 20px;
+    margin-top: 40px;
 }
-.cart, .customer-info{
+.cart{
     border: 1px solid #ddd;
     border-radius: 2px;
     padding: 20px 20px;
     background-color: #fff;
 }
-
-.cart{
-    display: flex;
-    flex-direction: column;
-    margin-bottom: 30px;
-}
-
-.cart .cart-ten{
-    font-size: 16px;
-    color: #F7452E;
-}
-
-.cart-item{
+.customer-info{
+    width: 1200px;
     display: flex;
     flex-direction: row;
-    justify-content: flex-start;
+    justify-content: space-between;
+}
+.cart-title{
     text-align: center;
-    margin-bottom: 20px;
+    margin-top: -10px;
+    margin-bottom: -20px;
 }
-
-.cart-item-hinhAnh{
-    height: 60x;
-    width: 60px;
-}
-
-.cart-item-hinhAnh img{
-    border-radius: 5px;
-}
-
-.cart-item-ten,.cart-item-price, .cart-item-action-add-quantity, .cart-item-price-sum, .cart-item-action-delete{
-    flex-basis: 15%;
-    font-size: 14px;
-    line-height: 18px;
-    padding: 20px 20px;
-}
-
-.cart-item-ten{
-    flex-grow: 1;
-}
-
-.cart-item-price{
-    flex-basis: 20%;
-}
-
-.cart-item-price-origin .cart-item-price-sale{
-    display: inline-block;
-}
-
-.cart-body .cart-item-price-origin {
-    color: #F7452E;
-    font-size: 12px;
-    text-decoration: line-through;
-}
-
-.cart-item-price-sale{
-    font-size: 14px;
-    color: #333;
-}
-
-.cart-item i{
-    color: #222;
-    cursor: pointer;
-}
-
-.cart-item input{
-    border: 1px solid #ddd;
-    padding: 5px 10px;
-    border-radius: 2px;
-}
-
-.cart-item i:hover{
-    color: #F7452E;
-}
-
-.cart-item-sum{
-    border-top: 1px solid #ddd;
-    padding: 0;
-    margin-bottom: 0;
-}
-
-.cart-item-sum span{
-    font-weight: 700;
-    color: #F7452E;
-}
-
-/*chỉnh form*/
-
 .customer-info .customer-info-ten{
     font-size: 16px;
     color: #F7452E;
@@ -103,7 +27,8 @@
 
 .customer-info label,input{
     display: block;
-    width: 100%;
+    width: 90%;
+    margin: auto;
     font-size: 14px;
 }
 

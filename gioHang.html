@@ -196,9 +196,10 @@
     </header>
     
     <main id="main-giohang">
-        <h1 class="cart-title">
-            Sản phẩm bạn đã chọn mua
-        </h1>
+        <h2 class="cart-title">
+            GIỎ HÀNG CỦA BẠN
+        </h2>
+        <div class="thanhngang"></div>
         <div class="menugiohang">
             <div class="hinh">Hình ảnh sản phẩm</div>
             <div class="tenspp">Tên sản phẩm</div>
@@ -208,25 +209,30 @@
             <div class="thaotacxoa"></div>            
         </div>
         <div class="gioHang" id="gioHang">
-            <div class="item-giohang">
-                <div class="hinhanh">
-                    <img src="https://cdn.tgdd.vn/Products/Images/42/70259/iphone-6-plus-64gb-3-400x460.png" alt="">
-                </div>
-                <p class="tensp">Iphone 6</p>
-                <div class="gia">
-                    <span class="giaGoc">6000000đ</span>
-                    <span class="giaBan">5500000đ</span>
-                </div>
-                <input type="number" class="soLuong" value="1">
-                <p class="tongTien">5500000đ</p>
-                <div class="hanhDong">
-                    <i class="fas fa-trash"></i>
+            <!--HIỂN THỊ SẢN PHẨM-->
+            
+        </div>
+        <div class="thanhToan">
+            <div class="tamTinh">
+                <p class="nd1_tt">Tạm tính:</p>
+                <div class="tamthanhtoan" id="thanhTien">
+
                 </div>
             </div>
+            <div class="tienPhaiTra">
+                <p class="nd1_tt">Thành tiền:</p>
+                <div class="thanhtoanEnd" id="thanhTien">
+
+                </div>
+            </div>
+            <div class="vat">
+                <p class="vat_tt">(Đã bao gồm VAT)</p>
+            </div>
         </div>
-        <div>
-            <div class="customer-info">
-                <h1 class="cart-title">THÔNG TIN KHÁCH HÀNG</h1>
+        <div class="thanhngang"></div>    
+        <div class="customer-info">
+            <div class="phanbentrai">
+                <h2 class="cart-title">THÔNG TIN KHÁCH HÀNG</h2>
                 <label for="hoten">Họ tên</label>
                 <input notnull oninput="Onvaluechange()" type="text" name="Họ tên" id="hoten">
                 <!--thông báo lỗi-->
@@ -245,21 +251,47 @@
                 <label for="diachi">Địa chỉ nhận hàng</label>
                 <input notnull oninput="Onvaluechange()" type="diachi" name="Địa chỉ" id="diachi">
                 <!--thông báo lỗi-->
-                <label id="thongbaoLoi" for="diachi" class="error"></label>
-
-                <label for="ngaysinh">Ngày sinh</label>
-                <input notnull oninput="Onvaluechange()" type="date" name="Ngày sinh" id="ngaysinh">
-                <!--thông báo lỗi-->
-                <label id="thongbaoLoi" for="ngaysinh" class="error"></label>
-
-                <label for="thoigiannhanhang">Thời gian nhận hàng</label>
-                <input notnull khoanggioihan oninput="Onvaluechange()" type="number" name="Thời gian nhận hàng" id="thoigiannhanhang" min="2" max="14">
-                <!--thông báo lỗi-->
-                <label id="thongbaoLoi" for="thoigiannhanhang" class="error"></label>
-
-                <button class="thanhtoanbtn" onclick="xacNhanThanhToan()">Thanh toán</button>
+                <label id="thongbaoLoi" for="diachi" class="error"></label>                
             </div>
-        </div>             
+            <div class="phanbenphai">
+                <h2 class="cart-title">CHI TIẾT THANH TOÁN</h2>
+                <div class="phantrentt">
+                    <div class="hinhthuctt">
+                        <p class="tenhthuc">HÌNH THỨC VẬN CHUYỂN</p>
+                        <div class="noidungnay">
+                            <p class="item-tenhthuc"><i class="fas fa-caret-right"></i>Giao hàng tiết kiệm(5-7 ngày)</p>                                        
+                            <p class="item-tenhthuc2">Giao hàng nhanh(3-5 ngày)</p>            
+                            <p class="item-tenhthuc2">Giao hàng đảm bảo(7 ngày)</p>          
+                            <p class="item-tenhthuc2"><i class="fas fa-sort-down"></i> Xem thêm <i class="fas fa-sort-down"></i></p> 
+                        </div>                            
+                    </div>
+                    <div class="ngangiuan"></div>
+                    <div class="dvivanchuyen">
+                        <p class="tenhthuc">ĐƠN VỊ VẬN CHUYỂN</p>  
+                        <div class="noidung2nay">
+                            <p class="item-tenhthuc"><i class="fas fa-caret-right"></i>ShopSale 4.0</p>                                        
+                            <p class="item-tenhthuc2">ShopSale Express</p>            
+                            <p class="item-tenhthuc2">NowShip</p>                    
+                            <p class="item-tenhthuc2">NinjaShip</p>                          
+                            <p class="item-tenhthuc2"><i class="fas fa-sort-down"></i> Xem thêm <i class="fas fa-sort-down"></i></p>       
+                        </div>                                     
+                    </div>
+                </div>
+                <div class="ngancuoi"></div>
+                <div class="luuyvanchuyen">
+                    <p class="luuy">Lưu ý:</p>
+                    <input class="noidungluuy" type="text" placeholder="Dành cho ShopSale">
+                </div>
+                <div class="ngancuoi"></div>
+                <div class="chinhsachvc">
+                    <p class="chinhsachvc">Hàng không thể giao tận tay người nhận sẽ hoàn trả lại cho ShopSale.</p>
+                </div>
+                <div class="ngancuoi"></div>
+            </div>           
+        </div>
+        <div class="btnthanhtoan">
+            <button class="thanhtoanbtn" onclick="xacNhanThanhToan()">Thanh toán</button>     
+        </div>         
     </main>
     <footer id="footer">
         <div class="footer_noiDung">
@@ -503,23 +535,21 @@
             luuDanhSachItemGioHangVaoLCS(dataGioHang, "gioHang");
             //tính tổng tiền
             // Tính lại tổng tiền
-            let nodeTongTien = document.getElementById("tongTien");
-            nodeTongTien.innerHTML = themChamVaoSo(tinhThanhTien(dataGioHang)) + " đ";            
+            let nodeTongTien = document.getElementById("thanhTien");
+            nodeTongTien.innerHTML = themChamVaoSo(tinhThanhTien()) + " đ";            
         }
         function tinhThanhTien(dataGioHang){
             let dataSanPham = layGioHangTuLCS('danhSachSanPham');
             let tongTien = 0;
-            for(var i=0; i<dataGioHang.length; i++){
+            for(var i=0; i < dataGioHang.length; i++){
                 let idSanPham = dataGioHang[i].id;
                 let soLuong = dataGioHang[i].soLuong;
                 let sanPham = dataSanPham.find(sp => sp.id == idSanPham);
-                let giaBan = tinhGiaBan(sanPham.giaGoc, sanPham.phanTramGiamGia);
-                tongTien += giaBan * soLuong;
+                let giaBan = tinhGiaBan();
+                tongTien += giaBan;
             }
             return tongTien;
-
-        }
-        function tinhTienSanPham(idSanPham){
+            console.log(tongTien);
 
         }
     </script>

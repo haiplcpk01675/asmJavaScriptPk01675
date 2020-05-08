@@ -53,5 +53,12 @@ function remove(idSanPham){
     this.luuDanhSachItemGioHangVaoLCS(xoaItemGioHang);
     return xoaItemGioHang;
 }
+function tinhThanhTien(){
+    var tongThanhToan = 0;
+
+
+
+    return tongThanhToan;
+}
 
 
