@@ -599,13 +599,13 @@
             var danhSachSanPham = localStorage.getItem('danhSachSanPham');
             var danhSachSanPhamSX = taoDoiTuongSanPham().fromJSONs(danhSachSanPham);
 
-            if(cachSapXep = 'giamDan'){
+            if(cachSapXep = 'tangDan'){
                 danhSachSanPhamSX.sort((a,b)=> (a.tinhGiaBan())>(b.tinhGiaBan()));
                 console.log(danhSachSanPhamSX);
                 break;
             }
 
-            if(cachSapXep = 'tangDan'){
+            if(cachSapXep = 'giamDan'){
                 danhSachSanPhamSX.sort((a,b)=> (a.tinhGiaBan())<(b.tinhGiaBan()));
                 console.log(danhSachSanPhamSX);
                 break;
