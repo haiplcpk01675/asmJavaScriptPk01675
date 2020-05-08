@@ -600,12 +600,12 @@
             var danhSachSanPhamSX = taoDoiTuongSanPham().fromJSONs(danhSachSanPham);
 
             if(cachSapXep = 'giamDan'){
-                danhSachSanPhamSX.sort((a,b)=> (a.tinhGiaBan())>(b.tinhGiaBan())? 1 : -1);
+                danhSachSanPhamSX.sort((a,b)=> (a.tinhGiaBan())>(b.tinhGiaBan()));
                 console.log(danhSachSanPhamSX);
             }
 
             if(cachSapXep = 'tangDan'){
-                danhSachSanPhamSX.sort((a,b)=> (a.tinhGiaBan())>(b.tinhGiaBan())? -1 : 1);
+                danhSachSanPhamSX.sort((a,b)=> (a.tinhGiaBan())<(b.tinhGiaBan())? -1 : 1);
                 console.log(danhSachSanPhamSX);
             }
             html = chuyenDanhSachDoiTuongSanPhamThanhHTML(danhSachSanPhamSX);
