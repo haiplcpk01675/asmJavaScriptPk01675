@@ -278,9 +278,7 @@
                     <div class="nganGiua"></div>
                     <input class="theCao" type="number" placeholder="Giá cao">
                 </div>
-                <button class="apdung">ÁP DỤNG</button>
-                
-
+                <button class="apdung">ÁP DỤNG</button>  
             </div>           
         </div>
         <div class="khungphan-sanpham">
@@ -601,12 +599,12 @@
             var danhSachSanPham = localStorage.getItem('danhSachSanPham');
             var danhSachSanPhamSX = taoDoiTuongSanPham().fromJSONs(danhSachSanPham);
 
-            if(cachSapXep = 'giamDan'){
+            if(cachSapXep = 'tangDan'){
                 danhSachSanPhamSX.sort((a,b)=> (a.tinhGiaBan())>(b.tinhGiaBan())? 1 : -1);
                 console.log(danhSachSanPhamSX);
             }
 
-            if(cachSapXep = 'tangDan'){
+            if(cachSapXep = 'giamDan'){
                 danhSachSanPhamSX.sort((a,b)=> (a.tinhGiaBan())>(b.tinhGiaBan())? -1 : 1);
                 console.log(danhSachSanPhamSX);
             }
