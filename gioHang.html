@@ -4,7 +4,6 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Thanh toán</title>
-    <link href="css/jquery.bxslider.css" rel="stylesheet">
     <link rel="stylesheet" href="css/cart.css">
     <link rel="stylesheet" href="css/gioHang.css">
     <link rel="stylesheet" href="css/style.css">
@@ -233,7 +232,7 @@
         <div class="customer-info">
             <div class="phanbentrai">
                 <h2 class="cart-title">THÔNG TIN KHÁCH HÀNG</h2>
-                <label for="hoten">Họ tên</label>
+                <label for="hoten">Họ tên người nhận</label>
                 <input notnull oninput="Onvaluechange()" type="text" name="Họ tên" id="hoten">
                 <!--thông báo lỗi-->
                 <label id="thongbaoLoi" for="hoten" class="error"></label>
@@ -251,7 +250,8 @@
                 <label for="diachi">Địa chỉ nhận hàng</label>
                 <input notnull oninput="Onvaluechange()" type="diachi" name="Địa chỉ" id="diachi">
                 <!--thông báo lỗi-->
-                <label id="thongbaoLoi" for="diachi" class="error"></label>                
+                <label id="thongbaoLoi" for="diachi" class="error"></label>  
+                
             </div>
             <div class="phanbenphai">
                 <h2 class="cart-title">CHI TIẾT THANH TOÁN</h2>
@@ -472,8 +472,6 @@
         
         hienThiDanhSachItemGioHang();
         function xacNhanThanhToan(){
-            
-            console.log('Gọi hàm Thanh toán')
             var nodeCha = event.target.parentElement;
             if(!ktraHopLe(nodeCha)){
                 return 
@@ -498,7 +496,6 @@
         }
         function chuyenDoiTuongItemGioHangSangHTML(itemGioHang){
             var sanPham = laySanPhamTheoId(itemGioHang.idSanPham);
-            console.log(sanPham);
             var tongTien = ((sanPham.tinhGiaBan())*itemGioHang.soLuong);
             var html =  '   <div id="itemhang" class="item-giohang">  '  + 
                 '                <div class="hinhanh">  '  + 

@@ -85,7 +85,6 @@ function chuyenDanhSachDoiTuongSanPhamThanhHTML(danhSachSanPham){
     output = đọn html sản phẩm */
 function chuyenDoiTuongSanPhamThanhHTML(sanPham){
     sanPham = taoDoiTuongSanPham(sanPham.hinhAnh, sanPham.ten, sanPham.giaGoc, sanPham.phanTramGiamGia, sanPham.khuVuc, sanPham.id);
-    console.log(sanPham);
     var html = '';
     html += '<div class="item">'
     html +=     '<div class="item-hinhAnh">'
