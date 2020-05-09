@@ -141,15 +141,17 @@ img{
     margin-right: 10px;
 }
 .nut-mua-tiep{
-    padding: 5px 10px 5px 10px;
     height: 30px;
     cursor: pointer;
-    background-color: rgb(243, 81, 49);
-    color: #fff;
+    color: #f53;
     z-index: 10;
+    font-size: 18px;
+    margin-top: -20px;
+    margin-left: 20px;
 }
 .nut-mua-tiep:hover{
-    background-color: rgb(223, 75, 46);
+    font-size: 20px;
+    font-weight: bold;
 }
 
 .nd1_tt{

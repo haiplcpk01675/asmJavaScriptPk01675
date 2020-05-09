@@ -586,7 +586,7 @@
             for (var i = 0; i < danhSachItemGioHang.length; i++) {
                 var itemGioHangHienTai = danhSachItemGioHang[i];
                 /*nếu tồn tại tăng số luowmgj item lên*/
-                if (itemGioHangHienTai.idSanPham == idSanPham) {
+                if (itemGioHangHienTai.id == idSanPham) {
                     danhSachItemGioHang[i].soLuong++;
                     coTonTaiTrongDanhSachItemGioHang = true;
                 }
@@ -596,7 +596,7 @@
                 danhSachItemGioHang.push(itemGioHang);
             }
             /*b5. lưu lại lcs*/
-            luuDataLocal(danhSachItemGioHang,'gioHang');
+            luuDataLocal(danhSachItemGioHang, 'gioHang');
         }
         function sapXepSanPham() {
             var cachSapXep = document.getElementById('sap-xep').value;
