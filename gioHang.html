@@ -505,7 +505,7 @@
                 '                    <span class="giaGoc">'+ themChamVaoSo(sanPham.giaGoc) +' đ</span>  '  + 
                 '                    <span class="giaBan">'+ themChamVaoSo(sanPham.tinhGiaBan()) +' đ</span>  '  + 
                 '                </div>  '  + 
-                '                <input type="number" oninput="tinhTienSanPham('+itemGioHang.idSanPham+')" class="soLuong" value="'+ itemGioHang.soLuong +'">  '  + 
+                '                <input type="number" oninput="tinhThanhTien('+itemGioHang.idSanPham+')" class="soLuong" value="'+ itemGioHang.soLuong +'">  '  + 
                 '                <p class="tongTien">'+ themChamVaoSo(tongTien) +'đ</p>  '  + 
                 '                <div class="hanhDong">  '  + 
                 '                    <i class="fas fa-trash" onclick="onClickNutXoa('+"\'"+itemGioHang.idSanPham+"\'"+')"></i>  '  + 
@@ -521,33 +521,31 @@
         function onClickNutXoa(id) {
             // Xóa node hiển thị
             let nodeSanPham = event.target.parentElement;
-            console.log(nodeSanPham.parentElement);
             nodeSanPham.parentElement.remove();
             // Xóa data
             let dataGioHang = layGioHangTuLCS("gioHang");
             let vitri = dataGioHang.findIndex(sp => sp.idSanPham == id);
-            console.log(dataGioHang[vitri]);
             dataGioHang.splice(vitri, 1);
             luuDanhSachItemGioHangVaoLCS(dataGioHang, "gioHang");
             //tính tổng tiền
             // Tính lại tổng tiền
-            let nodeTongTien = document.getElementById("thanhTien");
+            let nodeTongTien = document.getElementById("tongTien");
             nodeTongTien.innerHTML = themChamVaoSo(tinhThanhTien()) + " đ";            
         }
-        function tinhThanhTien(dataGioHang){
-            let dataSanPham = layGioHangTuLCS('danhSachSanPham');
-            let tongTien = 0;
-            for(var i=0; i < dataGioHang.length; i++){
-                let idSanPham = dataGioHang[i].id;
-                let soLuong = dataGioHang[i].soLuong;
-                let sanPham = dataSanPham.find(sp => sp.id == idSanPham);
-                let giaBan = tinhGiaBan();
-                tongTien += giaBan;
-            }
-            return tongTien;
-            console.log(tongTien);
+        // function tinhThanhTien(dataGioHang){
+        //     let dataSanPham = layGioHangTuLCS('danhSachSanPham');
+        //     let tongTien = 0;
+        //     for(var i=0; i < dataGioHang.length-1; i++){
+        //         let idSanPham = dataGioHang[i].id;
+        //         let soLuong = dataGioHang[i].soLuong;
+        //         let sanPham = dataSanPham.find(sp => sp.id == idSanPham);
+        //         let giaBan = tinhGiaBan();
+        //         tongTien += giaBan;
+        //     }
+        //     return tongTien;
+        //     console.log(tongTien);
 
-        }
+        // }
     </script>
 </body>
 </html>
