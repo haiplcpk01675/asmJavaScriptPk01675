@@ -24,21 +24,22 @@
             font-style:  italic; 
         }
         .thanhtoanbtn{
-            width: 400px;
-            height: 40px;
+            width: 450px;
+            height: 50px;
             margin: auto;
-            margin-left: 400px;
+            margin-left: 635px;
             line-height: 18px;
             border-radius: 5px;
             border: 1px solid #ddd;
             box-shadow: 4px 2px 2px #ddd;
             background-color: #f7452e;
-            margin-top: -20px;
+            opacity: 0.8;
+            margin-top: -80px;
             font-size: 16px;
             cursor: pointer;
         }
         .thanhtoanbtn:hover{
-            background-color: salmon;
+            opacity: 1;
         }
     </style>
 </head>
@@ -227,30 +228,36 @@
                 <p class="vat_tt">(Đã bao gồm VAT)</p>
             </div>
         </div>
-        <div class="thanhngang"></div>    
-        <div class="customer-info">
-            <div class="phanbentrai">
+        <div class="thanhngang"></div> 
+        <div class="khungchuamua">
+            <div class="customer-info">            
                 <h2 class="cart-title">THÔNG TIN KHÁCH HÀNG</h2>
                 <label for="hoten">Họ tên người nhận</label>
                 <input notnull oninput="Onvaluechange()" type="text" name="Họ tên" id="hoten">
                 <!--thông báo lỗi-->
                 <label id="thongbaoLoi" for="hoten" class="error"></label>
-
+    
                 <label for="phonenumber">Số điện thoại</label>
                 <input notnull sodt oninput="Onvaluechange()" type="number" name="Số điện thoại" id="phonenumber">
                 <!--thông báo lỗi-->
                 <label id="thongbaoLoi" for="phonenumber" class="error"></label>
-
+    
                 <label for="email">Email</label>
                 <input notnull email oninput="Onvaluechange()" type="email" name="Email" id="email">
                 <!--thông báo lỗi-->
                 <label id="thongbaoLoi" for="email" class="error"></label>
-
+    
                 <label for="diachi">Địa chỉ nhận hàng</label>
                 <input notnull oninput="Onvaluechange()" type="diachi" name="Địa chỉ" id="diachi">
                 <!--thông báo lỗi-->
                 <label id="thongbaoLoi" for="diachi" class="error"></label>  
+    
+                <label class="chuyen" for="hinhthuc">Cách thức thanh toán</label>
+                <input notnull oninput="Onvaluechange()" class="chuyen" type="diachi" name="Hình thức thanh toán" id="diachi">
+                <!--thông báo lỗi-->
+                <label id="thongbaoLoi" for="hinhthuc" class="error chuyen"></label>
                 
+                <button class="thanhtoanbtn" onclick="xacNhanThanhToan()">Xác nhận Thanh toán</button>
             </div>
             <div class="phanbenphai">
                 <h2 class="cart-title">CHI TIẾT THANH TOÁN</h2>
@@ -277,20 +284,12 @@
                     </div>
                 </div>
                 <div class="ngancuoi"></div>
-                <div class="luuyvanchuyen">
-                    <p class="luuy">Cách thức thanh toán:</p>
-                    <input class="noidungluuy" type="text" placeholder="Thanh toán khi nhận hàng/Thanh toán qua thẻ">
-                </div>
-                <div class="ngancuoi"></div>
                 <div class="chinhsachvc">
                     <p class="chinhsachvc">Hàng không thể giao tận tay người nhận sẽ hoàn trả lại cho ShopSale.</p>
                 </div>
                 <div class="ngancuoi"></div>
             </div>           
-        </div>
-        <div class="btnthanhtoan">
-            <button class="thanhtoanbtn" onclick="xacNhanThanhToan()">Thanh toán</button>     
-        </div>         
+        </div>        
     </main>
     <footer id="footer">
         <div class="footer_noiDung">
@@ -481,8 +480,11 @@
         }
         function hienThiDanhSachItemGioHang(){
             var danhSachItemGioHang = layGioHangTuLCS();
-            var HTML = chuyenDanhSachItemGioHangSangHTML(danhSachItemGioHang);
-            
+            if(danhSachItemGioHang == ''|| danhSachItemGioHang == null){
+                var HTML = inRaKhiGioHangTrong();
+            }else{
+                var HTML = chuyenDanhSachItemGioHangSangHTML(danhSachItemGioHang);                
+            }
             var nodeGioHang = document.getElementById('gioHang');
             nodeGioHang.innerHTML =  HTML;
         }
@@ -512,6 +514,16 @@
                 '                </div>  '  + 
                 '           </div>  ' ; 
             return html;   
+        }
+
+        function inRaKhiGioHangTrong() {
+            var HTML = '';
+            HTML += '<div class="khunghinhtrong">';
+            HTML += '   <img class="hinhtrong" src="https://cdn.dribbble.com/users/204955/screenshots/4930541/emptycart.png">';
+            HTML += '   <h3 class="noidungtrong1">GIỎ HÀNG TRỐNG</h3>';
+            HTML += '   <h3 class="noidungtrong">Vui lòng chọn thêm sản phẩm!</h3>';
+            HTML += '</div>';
+            return HTML;
         }
         //Xoá sp
         function xoaSanPham(){

@@ -26,22 +26,30 @@ img{
     display: flex;
     flex-direction: row;
     align-items: center;
-    padding-bottom: 10px;
+    padding-bottom: 15px;
 }
 .item-giohang .hinhanh img{
-    width: 60px;
-    height: 60px;
+    width: 70px;
+    height: 70px;
+    cursor: pointer;
 }
 .item-giohang .hinhanh, .soLuong, .tongTien, .hanhDong{
     flex: 1;
     margin-left: 60px;
 }
 .item-giohang .gia{
-    flex: 2;
+    width: 200px;
+    margin-left: 20px;
+}
+.item-giohang .soLuong{
+    width: 30px;
+    margin-left: 35px;
 }
 .item-giohang .tensp{
-    flex: 3;
+    width: 200px;
     text-align: center;
+    margin-left: 50px;
+    font-size: 16px;
 }
 .item-giohang .gia .giaGoc{
     font-size: 12px;
@@ -50,6 +58,7 @@ img{
 }
 .item-giohang .gia .giaBan{
     color: #e7452c;
+    font-size: 16px;
     margin-left: 10px;
 }
 .item-giohang .hanhDong i{
@@ -128,25 +137,14 @@ img{
     border-top: 1px dashed #f64147;
 }
 /*Phần thanh toán*/
-.phanbentrai{
-    width: 480px;
-    height: 450px;
-    margin-top: 10px;
-    background-color: #fff;
-    margin-left: 50px;    
-    border: 1px solid #ccc;
-    box-shadow: 2px 2px 4px #ddd;
-}
-.btnthanhtoan{
-    margin-top: 30px;
-}
+
 .thanhtoanbtn{
     color: #fff;
 }
 .phanbenphai{
     width: 480px;
     height: 450px;
-    margin-top: 10px;
+    margin-top: 20px;
     background-color: #fff;
     margin-right: 50px;    
     border: 1px solid #ccc;
@@ -223,12 +221,39 @@ img{
     margin: auto;
     text-align: center;
     line-height: 20px;
-    margin-top: 10px;
+    margin-top: 30px;
     color: #f53;
 }
 .ngancuoi{
     width: 150px;
+    height: 30px;
     margin: auto;
     margin-top: 15px;
     border-bottom: 1px dashed #f53;
+}
+.khunghinhtrong{
+    width: 500px;
+    height: 400px;
+    border-radius: 4px;
+    overflow: hidden;
+    margin: auto;
+    text-align: center;
+}
+.hinhtrong{
+    width: 100%;
+}
+.noidungtrong1{
+    color: #f53;
+    line-height: 20px;
+    font-size: 20px;
+    position: absolute;
+    margin-top: -360px;
+    margin-left: 170px;
+}
+.noidungtrong{
+    color: #f53;
+    line-height: 16px;
+    position: absolute;
+    margin-top: -20px;
+    margin-left: 140px;
 }

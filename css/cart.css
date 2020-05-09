@@ -9,11 +9,21 @@
     padding: 20px 20px;
     background-color: #fff;
 }
-.customer-info{
+
+.khungchuamua{
     width: 1200px;
     display: flex;
-    flex-direction: row;
     justify-content: space-between;
+}
+.customer-info{
+    width: 480px;
+    height: fit-content;
+    background-color: #fff;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    box-shadow: 1px 3px 1px #ccc ;
+    margin-top: 20px;
+    margin-left: 50px;
 }
 .cart-title{
     text-align: center;
@@ -25,13 +35,19 @@
     color: #F7452E;
 }
 
-.customer-info label,input{
+.customer-info input{
     display: block;
     width: 90%;
     margin: auto;
     font-size: 14px;
 }
-
+.customer-info label{
+    display: block;
+    width: 90%;
+    margin: auto;
+    font-size: 16px;
+    margin-left: 35px;
+}
 .customer-info input{
     padding: 10px;
     border: 1px solid #ddd;
@@ -52,6 +68,4 @@
     margin-top: 20px;
 }
 
-.customer-info .btn{
-    margin-top: 20px;
-}
+
