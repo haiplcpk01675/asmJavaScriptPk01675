@@ -4,13 +4,6 @@ var danhSachSliderItem = document.getElementsByName('slider-item');
 hienThiSliderHienTai(start);
 
 loadChamTron();
-
-setInterval(autoChuyenHinh,4000); // thời gian tính bằng milisecond, ví dụ : 1000 tương đương 1 giây
-function autoChuyenHinh(){
-    if(chayauto)
-    onClickXemAnhSau();
-}
-
 let chayauto = true;
 // them su kien hover
 let nodeSlider = document.getElementById('slider');
@@ -22,6 +15,11 @@ nodeSlider.addEventListener('mouseout',()=>{
     chayauto = !chayauto;
 })
 
+setInterval(autoChuyenHinh,3000); // thời gian tính bằng milisecond, ví dụ : 1000 tương đương 1 giây
+function autoChuyenHinh(){
+    if(chayauto)
+    onClickXemAnhSau();
+}
 function onClickXemAnhTruoc(){
     start--;
     if(start == -1){
