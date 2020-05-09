@@ -114,10 +114,6 @@ function chuyenDoiTuongSanPhamThanhHTML(sanPham){
     html += '</div>'
     return html;
 }
-function themChamVaoSo(so) {
-    var thayDoi = so.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ".");
-    return thayDoi;
-}
 function laySanPhamTheoId(idSanPham){
         /*Mục tiêu dựa vào id lấy toàn bộ thông tin sản phẩm
             1. input: Id sản phẩm

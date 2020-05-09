@@ -1,20 +1,20 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Shop Sale</title>
     <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" href="fonts/fontawesome-free-5.13.0-web/css/all.min.css">
-    <script src="js/until.js"></script>    
+    <script src="js/until.js"></script>
     <script src="js/sanPham.js"></script>
-    <script src="js/gioHang.js"></script>
-    <script src="js/formValidation.js"></script>    
+    <script src="js/formValidation.js"></script>
     <link rel="stylesheet" href="css/styles.css">
     <link rel="stylesheet" href="css/animations.css">
     <link rel="stylesheet" href="css/slider.css">
     <style>
-        .error2{
+        .error2 {
             font-size: 12px;
             color: rgb(243, 33, 33);
             line-height: 12px;
@@ -22,10 +22,11 @@
             margin-top: 5px;
             padding-bottom: 15px;
             margin-left: 100px;
-            font-style:  italic; 
+            font-style: italic;
         }
     </style>
 </head>
+
 <body>
     <header id="header">
         <div id="noidung-header">
@@ -36,8 +37,10 @@
                         <div class="qrcode">
                             <img src="images/f184c0b68a2d385feb5d70a76396230b.png" alt="QR Code" class="qrcode_qr">
                             <div class="qrcode_ap">
-                                <a href="#" class="qrcode_ap_link"><img src="images/2679f513b5f9e235adf2c6c288617e7b.png" alt="Google Play"></a>
-                                <a href="#" class="qrcode_ap_link"><img src="images/759416b55e2bd69ecc360ee2faab7ad0.png" alt="App Store"></a>
+                                <a href="#" class="qrcode_ap_link"><img
+                                        src="images/2679f513b5f9e235adf2c6c288617e7b.png" alt="Google Play"></a>
+                                <a href="#" class="qrcode_ap_link"><img
+                                        src="images/759416b55e2bd69ecc360ee2faab7ad0.png" alt="App Store"></a>
                             </div>
                         </div>
                     </li>
@@ -60,7 +63,7 @@
                                 <a onclick="nodeDangNhap()">Đăng nhập</a>
                             </div>
                         </div>
-                    </li>                    
+                    </li>
                     <li class="nd1">
                         <a href="#"><i class="far fa-question-circle"></i>Trợ giúp</a>
                     </li>
@@ -70,7 +73,7 @@
             </nav>
             <div class="header-logo">
                 <a href="index.html"><img src="images/image.png" alt=""></a>
-            </div>  
+            </div>
             <div class="header-giua">
                 <div class="menu">
                     <nav id="nav-bar">
@@ -140,48 +143,49 @@
                             </li>
                         </ul>
                     </nav>
-                
-                <div class="timkiem">                   
-                    <input notnull oninput="Onvaluechange()" type="text" name="Tìm kiếm" id="noidung-timkiem" class="noidung-timkiem" placeholder="Tìm kiếm trong Shop">
-                    <!--thông báo lỗi-->
-                    <label id="thongbaoLoi" for="noidung-timkiem" class="error2"></label>
-                    <div class="timkiem_lichsu">
-                        <h3 class="timkiem_lichsu_head">Lịch sử Tìm kiếm</h3>
-                        <ul class="timkiem_lichsu_list">
-                            <li class="timkiem_lichsu__danhsach">
-                                <a href="#">Điện thoại SamSung giá rẻ</a>
-                            </li>
-                            <li class="timkiem_lichsu__danhsach">
-                                <a href="#">Điện thoại giá rẻ</a>
-                            </li>
-                            <li class="timkiem_lichsu__danhsach">
-                                <a href="#">Điện thoại Iphone</a>
-                            </li>
-                            <li class="timkiem_lichsu__danhsach">
-                                <a href="#">Thầy Hiếu đẹp trai nhất FPT Tây Nguyên</a>
-                            </li>
-                        </ul>
+
+                    <div class="timkiem">
+                        <input notnull oninput="Onvaluechange()" type="text" name="Tìm kiếm" id="noidung-timkiem"
+                            class="noidung-timkiem" placeholder="Tìm kiếm trong Shop">
+                        <!--thông báo lỗi-->
+                        <label id="thongbaoLoi" for="noidung-timkiem" class="error2"></label>
+                        <div class="timkiem_lichsu">
+                            <h3 class="timkiem_lichsu_head">Lịch sử Tìm kiếm</h3>
+                            <ul class="timkiem_lichsu_list">
+                                <li class="timkiem_lichsu__danhsach">
+                                    <a href="#">Điện thoại SamSung giá rẻ</a>
+                                </li>
+                                <li class="timkiem_lichsu__danhsach">
+                                    <a href="#">Điện thoại giá rẻ</a>
+                                </li>
+                                <li class="timkiem_lichsu__danhsach">
+                                    <a href="#">Điện thoại Iphone</a>
+                                </li>
+                                <li class="timkiem_lichsu__danhsach">
+                                    <a href="#">Thầy Hiếu đẹp trai nhất FPT Tây Nguyên</a>
+                                </li>
+                            </ul>
+                        </div>
+                        <select id="timkiemchon" class="btntimkiemchon">
+                            <option class="in1" value="trong">Trong Shop</option>
+                            <option class="in1" value="ngoai">Ngoài Shop</option>
+                        </select>
+                        <button onclick="onclickTimKiem()" class="btn-timkiem">
+                            <i class="btn-timkiemlg fas fa-search"></i>
+                        </button>
                     </div>
-                    <select id="timkiemchon" class="btntimkiemchon">
-                        <option class="in1" value="trong">Trong Shop</option>
-                        <option class="in1" value="ngoai">Ngoài Shop</option>            
-                    </select>
-                    <button onclick="onclickTimKiem()" class="btn-timkiem">
-                        <i class="btn-timkiemlg fas fa-search"></i>
-                    </button>
-                </div>   
-            </div>  
-            <div class="header-muahang">
-                <a href="gioHang.html"><i class="fas fa-cart-arrow-down"></i></a>
-            </div> 
-        </div>  
+                </div>
+                <div class="header-muahang">
+                    <a href="gioHang.html"><i class="fas fa-cart-arrow-down"></i></a>
+                </div>
+            </div>
     </header>
     <div class="slider" id="slider">
         <div class="slider-item" name="slider-item">
             <img src="https://cf.shopee.vn/file/ba3ec5b685edd7800bbe8c37889464ce" width="100%" height="400">
-         </div>
+        </div>
         <div class="slider-item" name="slider-item">
-           <img src="images/9e3321964e6de4f64f6caadaefc0c174.jpg" width="100%" height="400">
+            <img src="images/9e3321964e6de4f64f6caadaefc0c174.jpg" width="100%" height="400">
         </div>
         <div class="slider-item" name="slider-item">
             <img src="https://cf.shopee.vn/file/3310b6565ed646a2d65559f55fee15ed" width="100%" height="400">
@@ -200,7 +204,7 @@
             <span onclick="onClickXemAnhSau()" id="btn-next"><i class="fas fa-chevron-circle-right"></i></span>
         </div>
         <div id="khungChamTron">
-            
+
         </div>
     </div>
     <main id="main">
@@ -213,45 +217,46 @@
                     <li class="item-danhmuc"><a href="#"><i class="fas fa-caret-right"></i>Tất cả sản phẩm</a></li>
                 </div>
                 <div class="itm1">
-                    <li class="item-danhmuc2"><a href="#">Điện thoại Nokia</a></li>                    
+                    <li class="item-danhmuc2"><a href="#">Điện thoại Nokia</a></li>
                 </div>
                 <div class="itm1">
-                    <li class="item-danhmuc2"><a href="#">Điện thoại Apple</a></li>                    
+                    <li class="item-danhmuc2"><a href="#">Điện thoại Apple</a></li>
                 </div>
                 <div class="itm1">
-                    <li class="item-danhmuc2"><a href="#">Điện thoại SamSung</a></li>                    
+                    <li class="item-danhmuc2"><a href="#">Điện thoại SamSung</a></li>
                 </div>
                 <div class="itm1">
-                    <li class="item-danhmuc2"><a href="#">Điện thoại LG</a></li>                    
+                    <li class="item-danhmuc2"><a href="#">Điện thoại LG</a></li>
                 </div>
                 <div class="itm1">
-                    <li class="item-danhmuc2"><a href="#">Điện thoại Huawei</a></li>                    
+                    <li class="item-danhmuc2"><a href="#">Điện thoại Huawei</a></li>
                 </div>
                 <div class="itm1">
-                    <li class="item-danhmuc2"><a href="#">Điện thoại Sony</a></li>                    
+                    <li class="item-danhmuc2"><a href="#">Điện thoại Sony</a></li>
                 </div>
             </div>
             <div class="bolocTimkiem">
                 <div class="tieude">
                     <p class="tieude1"><i class="fas fa-chart-pie"></i>Bộ lọc tìm kiếm</p>
                 </div>
-                <div class="noiban">                    
+                <div class="noiban">
                     <div class="menudanhmuc2">
                         <p class="mucdeban">NƠI BÁN</p>
                         <div class="itm1">
                             <li class="item-danhmuc"><a href="#"><i class="fas fa-caret-right"></i>Cả nước</a></li>
                         </div>
                         <div class="itm1">
-                            <li class="item-danhmuc2"><a href="#">Đăk Lăk</a></li>                    
+                            <li class="item-danhmuc2"><a href="#">Đăk Lăk</a></li>
                         </div>
                         <div class="itm1">
-                            <li class="item-danhmuc2"><a href="#">Hà Nội</a></li>                    
+                            <li class="item-danhmuc2"><a href="#">Hà Nội</a></li>
                         </div>
                         <div class="itm1">
-                            <li class="item-danhmuc2"><a href="#">Hồ Chí Minh</a></li>                    
+                            <li class="item-danhmuc2"><a href="#">Hồ Chí Minh</a></li>
                         </div>
                         <div class="itm1">
-                            <li class="item-danhmuc2"><a href="#"><i class="fas fa-sort-down"></i> Xem thêm <i class="fas fa-sort-down"></i></a></li>                    
+                            <li class="item-danhmuc2"><a href="#"><i class="fas fa-sort-down"></i> Xem thêm <i
+                                        class="fas fa-sort-down"></i></a></li>
                         </div>
                     </div>
                     <div class="menudanhmuc3">
@@ -260,19 +265,20 @@
                             <li class="item-danhmuc"><a href="#"><i class="fas fa-caret-right"></i>ShopSale 4.0</a></li>
                         </div>
                         <div class="itm1">
-                            <li class="item-danhmuc2"><a href="#">ShopSale Express</a></li>                    
+                            <li class="item-danhmuc2"><a href="#">ShopSale Express</a></li>
                         </div>
                         <div class="itm1">
-                            <li class="item-danhmuc2"><a href="#">NowShip</a></li>                    
+                            <li class="item-danhmuc2"><a href="#">NowShip</a></li>
                         </div>
                         <div class="itm1">
-                            <li class="item-danhmuc2"><a href="#">NinjaShip</a></li>                    
+                            <li class="item-danhmuc2"><a href="#">NinjaShip</a></li>
                         </div>
                         <div class="itm1">
-                            <li class="item-danhmuc2"><a href="#"><i class="fas fa-sort-down"></i> Xem thêm <i class="fas fa-sort-down"></i></a></li>                    
+                            <li class="item-danhmuc2"><a href="#"><i class="fas fa-sort-down"></i> Xem thêm <i
+                                        class="fas fa-sort-down"></i></a></li>
                         </div>
                     </div>
-                </div>                
+                </div>
             </div>
             <div class="khunggiamua">
                 <div class="tieude">
@@ -284,7 +290,7 @@
                     <input class="theCao" type="number" placeholder="Giá cao">
                 </div>
                 <button class="apdung">ÁP DỤNG</button>
-            </div>           
+            </div>
         </div>
         <div class="khungphan-sanpham">
             <div class="khungloc-sanpham">
@@ -294,9 +300,9 @@
                 <button class="nbtnn htbl">Bán chạy</button>
 
                 <select id="sap-xep" class="btn" onchange="sapXepSanPham()">
-                    <option value=""selected>Giá</option>
+                    <option value="" selected>Giá</option>
                     <option value="tangDan">Giá tăng dần</option>
-                    <option value="giamDan">Giá giảm dần</option>            
+                    <option value="giamDan">Giá giảm dần</option>
                 </select>
                 <div class="hom-filter_page">
                     <span class="hom-filter_page-num">
@@ -307,9 +313,9 @@
                         <a href="#" class="nutdieuhuong"><i class="page-icon fas fa-angle-right"></i></a>
                     </div>
                 </div>
-            </div>            
+            </div>
             <div id="products">
-                    <!--Hiển thị danh sách sản phẩm-->
+                <!--Hiển thị danh sách sản phẩm-->
                 <div class="items">
                     <div class="item">
                         <div class="item-hinhAnh">
@@ -356,8 +362,8 @@
                         <button class="btn btn-primary">Thêm vào giỏ hàng</button>
                     </div>
                 </div>
-            </div>            
-        </div>        
+            </div>
+        </div>
     </main>
     <footer id="footer">
         <div class="footer_noiDung">
@@ -395,7 +401,7 @@
                     <div class="footer_noiDung_header">
                         <h3>NGÂN HÀNG LIÊN KẾT</h3>
                     </div>
-                    <div class="cacnganhang"> 
+                    <div class="cacnganhang">
                         <div class="cacnganhg">
                             <img src="images/bidvtt.png" alt="">
                         </div>
@@ -409,16 +415,17 @@
                             <img src="images/vietcombanktt.png" alt="">
                         </div>
                         <div class="cacnganhg">
-                            <img src="images/sacombank.png" alt=""> 
-                        </div>    
+                            <img src="images/sacombank.png" alt="">
+                        </div>
                     </div>
-                                       
+
                 </div>
                 <div class="footer_noiDung_nd3b">
                     <div class="footer_noiDung_header">
-                        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcQJcQh7g-xkXE8lZ699qf2EykoZ_xPTAkwZmu-0dWtlM8hhfhgi&usqp=CAU" alt="">
+                        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcQJcQh7g-xkXE8lZ699qf2EykoZ_xPTAkwZmu-0dWtlM8hhfhgi&usqp=CAU"
+                            alt="">
                     </div>
-                </div>                
+                </div>
             </div>
             <div class="footer_noiDung_nd4">
                 <div class="footer_noiDung_header">
@@ -437,18 +444,22 @@
                     <img src="images/f184c0b68a2d385feb5d70a76396230b.png" alt="">
                 </div>
                 <div class="lienketcungqr">
-                    <a href="#" class="qr_ap_link"><img src="images/2679f513b5f9e235adf2c6c288617e7b.png" alt="Google Play"></a>
-                    <a href="#" class="qr_ap_link"><img src="images/759416b55e2bd69ecc360ee2faab7ad0.png" alt="App Store"></a>
+                    <a href="#" class="qr_ap_link"><img src="images/2679f513b5f9e235adf2c6c288617e7b.png"
+                            alt="Google Play"></a>
+                    <a href="#" class="qr_ap_link"><img src="images/759416b55e2bd69ecc360ee2faab7ad0.png"
+                            alt="App Store"></a>
                 </div>
             </div>
         </div>
         <div class="noidung2">
-            Quốc gia & Khu vực: <span class="nuoc"> Việt Nam </span> | <span class="nuoc">Lào </span> | <span class="nuoc"> Thái Lan </span> | 
-            <span class="nuoc"> Trung Quốc </span> | <span class="nuoc"> Indonesia </span>|<span class="nuoc"> ...</span>
+            Quốc gia & Khu vực: <span class="nuoc"> Việt Nam </span> | <span class="nuoc">Lào </span> | <span
+                class="nuoc"> Thái Lan </span> |
+            <span class="nuoc"> Trung Quốc </span> | <span class="nuoc"> Indonesia </span>|<span class="nuoc">
+                ...</span>
         </div>
         <div class="diachishop">
             <p>Công ty Trách nhiện hữu hạn Một thành viên ShopSale</p>
-            <p>Địa chỉ:  Thành phố Buôn Ma Thuột - tỉnh Đăk Lăk</p>
+            <p>Địa chỉ: Thành phố Buôn Ma Thuột - tỉnh Đăk Lăk</p>
             <p>Bản quyền của Công ty TNHHMTV ShopSale</p>
         </div>
     </footer>
@@ -462,27 +473,31 @@
                 <div class="khunginner__noidung">
                     <div class="khung_inner_tren">
                         <h3 class="heading_inner">Đăng ký</h3>
-                        <span id="chuyenDn" class="chuyenDn"  onclick="nodeDangNhap()" >Đăng nhập</span>
+                        <span id="chuyenDn" class="chuyenDn" onclick="nodeDangNhap()">Đăng nhập</span>
                     </div>
                     <div class="khunginner_phan2">
                         <div class="nhominput">
-                            <input notnull oninput="Onvaluechange()" name="Số điện thoại/Email/Tên Đăng ký" type="text" id="khunginner__input" class="khunginner__input" placeholder="Số điện thoại/Email/Tên Đăng ký"> 
+                            <input notnull oninput="Onvaluechange()" name="Số điện thoại/Email/Tên Đăng ký" type="text"
+                                id="khunginner__input" class="khunginner__input"
+                                placeholder="Số điện thoại/Email/Tên Đăng ký">
                             <!--thông báo lỗi-->
                             <label id="thongbaoLoi" for="khunginner__input" class="error2"></label>
                         </div>
-                        
+
                         <div class="nhominput">
-                            <input notnull oninput="Onvaluechange()" name="Mật khẩu" type="password" id="khunginner__input" class="khunginner__input" placeholder="Mật khẩu của bạn">                            
+                            <input notnull oninput="Onvaluechange()" name="Mật khẩu" type="password"
+                                id="khunginner__input" class="khunginner__input" placeholder="Mật khẩu của bạn">
                             <!--thông báo lỗi-->
                             <label id="thongbaoLoi" for="khunginner__input" class="error2"></label>
                         </div>
-                        
+
                         <div class="nhominput">
-                            <input notnull oninput="Onvaluechange()" name="Mật khẩu" type="password" id="khunginner__input" class="khunginner__input" placeholder="Nhập lại mật khẩu">                            
+                            <input notnull oninput="Onvaluechange()" name="Mật khẩu" type="password"
+                                id="khunginner__input" class="khunginner__input" placeholder="Nhập lại mật khẩu">
                             <!--thông báo lỗi-->
                             <label id="thongbaoLoi" for="khunginner__input" class="error2"></label>
                         </div>
-                        
+
                     </div>
                     <div class="khunginner_phan3">
                         <p class="chuChinhSachText">
@@ -501,8 +516,8 @@
                     <img class="mxhKhung" src="images/google.png" alt="">
                 </div>
             </div>
-        </div> 
-    </div>   
+        </div>
+    </div>
     <div id="dangNhap" class="hienThiDkDnh">
         <div class="hienThiDkDn__body">
             <!--Nội dung trong đăg nhập-->
@@ -514,10 +529,10 @@
                     </div>
                     <div class="khunginner_phan2">
                         <div class="nhominput">
-                            <input type="text"class="khunginner__input" placeholder="Số điện thoại/Email/Tên Đăng ký">
+                            <input type="text" class="khunginner__input" placeholder="Số điện thoại/Email/Tên Đăng ký">
                         </div>
                         <div class="nhominput">
-                            <input type="password"class="khunginner__input" placeholder="Mật khẩu của bạn">
+                            <input type="password" class="khunginner__input" placeholder="Mật khẩu của bạn">
                         </div>
                     </div>
                     <div class="khunginner_phan3">
@@ -525,7 +540,7 @@
                             <a href="" class="quenMkLink">Quên mật khẩu</a>
                             <a href="" class="quenMkLink2">Cần trợ giúp?</a>
                         </div>
-                        
+
                     </div>
                     <div class="nutDieuKhien">
                         <button onclick="anDangNhap()" class="bttrtn">TRỞ LẠI</button>
@@ -538,13 +553,13 @@
                 </div>
             </div>
         </div>
-    </div> 
+    </div>
 
     <script>
         /*b1. Lấy danh sách dưới LCS*/
         var jsonDanhSachSanPham = localStorage.getItem('danhSachSanPham');
         var danhSachSanPham = taoDoiTuongSanPham().fromJSONs(jsonDanhSachSanPham);
-        
+
 
         /*b2. CHUYỂN danh sách đối tượng thành đoạn html*/
         var HTML = chuyenDanhSachDoiTuongSanPhamThanhHTML(danhSachSanPham);
@@ -553,8 +568,8 @@
         var nodeProducts = document.getElementById('products');
         nodeProducts.innerHTML = HTML;
 
-        function onClickThemVaoGioHang(idSanPham, soLuong){
-            alert('Thêm vào giỏ hàng sản phẩm có ID '+idSanPham+' thành công!');
+        function onClickThemVaoGioHang(idSanPham, soLuong) {
+            alert('Thêm vào giỏ hàng sản phẩm có ID ' + idSanPham + ' thành công!');
 
             /*Logic đưa vào giỏ hàng*/
             /*B1: Phân tích csdl hiện có trong giỏ hàng là gì
@@ -565,52 +580,69 @@
 
             /*Bước 2: xây dựng hàm tạo nhanh đối tượng item giỏ hàng*/
             /*Bước 3: Lấy danh sách gỏ hàng có trong LCS lên .... để lấy toàn bộ item giỏ hàng*/
-            var danhSachItemGioHang = layDanhSachItemGioHang();
+            var danhSachItemGioHang = layDataTuLocal('gioHang');
             /*thêm item vào giỏ*/
             var coTonTaiTrongDanhSachItemGioHang = false;
-            for(var i=0; i<danhSachItemGioHang.length; i++){
+            for (var i = 0; i < danhSachItemGioHang.length; i++) {
                 var itemGioHangHienTai = danhSachItemGioHang[i];
                 /*nếu tồn tại tăng số luowmgj item lên*/
-                if(itemGioHangHienTai.idSanPham == idSanPham){
-                    danhSachItemGioHang[i].soLuong ++;
+                if (itemGioHangHienTai.idSanPham == idSanPham) {
+                    danhSachItemGioHang[i].soLuong++;
                     coTonTaiTrongDanhSachItemGioHang = true;
                 }
             }
-            if(coTonTaiTrongDanhSachItemGioHang == false){
-                var itemGioHang = taoDoiTuongItemGioHang(idSanPham,1);
+            if (coTonTaiTrongDanhSachItemGioHang == false) {
+                var itemGioHang = taoDoiTuongItemGioHang(idSanPham, 1);
                 danhSachItemGioHang.push(itemGioHang);
             }
             /*b5. lưu lại lcs*/
-            luuDanhSachItemGioHangVaoLCS(danhSachItemGioHang);
+            luuDataLocal(danhSachItemGioHang,'gioHang');
         }
-        function sapXepSanPham(){
+        function sapXepSanPham() {
             var cachSapXep = document.getElementById('sap-xep').value;
             var danhSachSanPham = localStorage.getItem('danhSachSanPham');
             var danhSachSanPhamSX = taoDoiTuongSanPham().fromJSONs(danhSachSanPham);
-            if(cachSapXep == 'tangDan'){
-                danhSachSanPhamSX.sort((a,b)=> (Number(a.tinhGiaBan())) > (Number(b.tinhGiaBan()))? 1 : -1);
-            }else if(cachSapXep == 'giamDan'){
-                danhSachSanPhamSX.sort((a,b)=> (Number(a.tinhGiaBan())) > (Number(b.tinhGiaBan()))? -1 : 1);
+            if (cachSapXep == 'tangDan') {
+                danhSachSanPhamSX.sort((a, b) => (Number(a.tinhGiaBan())) > (Number(b.tinhGiaBan())) ? 1 : -1);
+            } else if (cachSapXep == 'giamDan') {
+                danhSachSanPhamSX.sort((a, b) => (Number(a.tinhGiaBan())) > (Number(b.tinhGiaBan())) ? -1 : 1);
             }
             html = chuyenDanhSachDoiTuongSanPhamThanhHTML(danhSachSanPhamSX);
             nodeProducts = document.getElementById('products');
             nodeProducts.innerHTML = html;
         }
-        function onclickTimKiem(){
+        function onclickTimKiem() {
             var nodeCha = event.target.parentElement;
-            if(!ktraHopLe(nodeCha)){
+            if (!ktraHopLe(nodeCha)) {
                 return
             }
         }
-        function xacNhanDangKy(){
+        function xacNhanDangKy() {
             var nodeCha = event.target.parentElement;
-            if(!ktraHopLe(nodeCha)){
-                return 
-                
+            if (!ktraHopLe(nodeCha)) {
+                return
+
             }
-            alert('Đăng ký thành công!') ;              
+            alert('Đăng ký thành công!');
+        }
+
+       
+        function themSanPhamVaoGioHang(idSanPham, gioHang) {
+            /*thêm sp vào giỏ: in: id sanphaamr ............ out: giỏ hàng */
+            var gioHangSauKhiDuocThem = gioHang;
+            var itemGioHang = taoDoiTuongItemGioHang(idSanPham, 1);
+            gioHangSauKhiDuocThem.push(itemGioHang);
+            return gioHangSauKhiDuocThem;
+        }
+       
+        function taoDoiTuongItemGioHang(idSanPham, soLuong) {
+            var itemGioHang = new Object();
+            itemGioHang.id = idSanPham;
+            itemGioHang.soLuong = soLuong;
+            return itemGioHang;
         }
     </script>
 </body>
 <script src="js/slider.js"></script>
+
 </html>

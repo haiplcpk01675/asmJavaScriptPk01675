@@ -10,7 +10,6 @@
     <link rel="stylesheet" href="fonts/fontawesome-free-5.13.0-web/css/all.min.css">
     <script src="js/until.js"></script>
     <script src="js/sanPham.js"></script>
-    <script src="js/gioHang.js"></script> 
     <script src="js/formValidation.js"></script>
     <link rel="stylesheet" href="css/styles.css">
     <link rel="stylesheet" href="css/animations.css">
@@ -214,14 +213,14 @@
         <div class="thanhToan">
             <div class="tamTinh">
                 <p class="nd1_tt">Tạm tính:</p>
-                <div class="tamthanhtoan" id="thanhTien">
-
+                <div class="tamthanhtoan">
+                    <p class="tongTienTra" id="tongTienTam"></p>
                 </div>
             </div>
             <div class="tienPhaiTra">
                 <p class="nd1_tt">Thành tiền:</p>
-                <div class="thanhtoanEnd" id="thanhTien">
-
+                <div class="thanhtoanEnd">
+                    <p class="tongTienTra" id="tongTienTra"></p>
                 </div>
             </div>
             <div class="vat">
@@ -463,101 +462,6 @@
             </div>
         </div>
     </div> 
-
-
-
-    <script>
-        
-        hienThiDanhSachItemGioHang();
-        function xacNhanThanhToan(){
-            var nodeCha = event.target.parentElement;
-            if(!ktraHopLe(nodeCha)){
-                return 
-                
-            }
-            alert('Thanh toán thành công!') ;     
-            
-        }
-        function hienThiDanhSachItemGioHang(){
-            var danhSachItemGioHang = layGioHangTuLCS();
-            if(danhSachItemGioHang == ''|| danhSachItemGioHang == null){
-                var HTML = inRaKhiGioHangTrong();
-            }else{
-                var HTML = chuyenDanhSachItemGioHangSangHTML(danhSachItemGioHang);                
-            }
-            var nodeGioHang = document.getElementById('gioHang');
-            nodeGioHang.innerHTML =  HTML;
-        }
-        function chuyenDanhSachItemGioHangSangHTML(danhSachItemGioHang){
-            var htmlTong = '';
-            for(var i = 0; i < danhSachItemGioHang.length; i++){
-                htmlTong = htmlTong + chuyenDoiTuongItemGioHangSangHTML(danhSachItemGioHang[i]);
-            }
-            return htmlTong;
-        }
-        function chuyenDoiTuongItemGioHangSangHTML(itemGioHang){
-            var sanPham = laySanPhamTheoId(itemGioHang.idSanPham);
-            var tongTien = ((sanPham.tinhGiaBan())*itemGioHang.soLuong);
-            var html =  '   <div id="itemhang" class="item-giohang">  '  + 
-                '                <div class="hinhanh">  '  + 
-                '                    <img src="'+ sanPham.hinhAnh +'" alt="">  '  + 
-                '                </div>  '  + 
-                '                <p class="tensp">'+ sanPham.ten +'</p>  '  + 
-                '                <div class="gia">  '  + 
-                '                    <span class="giaGoc">'+ themChamVaoSo(sanPham.giaGoc) +' đ</span>  '  + 
-                '                    <span class="giaBan">'+ themChamVaoSo(sanPham.tinhGiaBan()) +' đ</span>  '  + 
-                '                </div>  '  + 
-                '                <input type="number" oninput="tinhThanhTien('+itemGioHang.idSanPham+')" class="soLuong" value="'+ itemGioHang.soLuong +'">  '  + 
-                '                <p class="tongTien">'+ themChamVaoSo(tongTien) +'đ</p>  '  + 
-                '                <div class="hanhDong">  '  + 
-                '                    <i class="fas fa-trash" onclick="onClickNutXoa('+"\'"+itemGioHang.idSanPham+"\'"+')"></i>  '  + 
-                '                </div>  '  + 
-                '           </div>  ' ; 
-            return html;   
-        }
-
-        function inRaKhiGioHangTrong() {
-            var HTML = '';
-            HTML += '<div class="khunghinhtrong">';
-            HTML += '   <img class="hinhtrong" src="https://cdn.dribbble.com/users/204955/screenshots/4930541/emptycart.png">';
-            HTML += '   <h3 class="noidungtrong1">GIỎ HÀNG TRỐNG</h3>';
-            HTML += '   <h3 class="noidungtrong">Vui lòng chọn thêm sản phẩm!</h3>';
-            HTML += '</div>';
-            return HTML;
-        }
-        //Xoá sp
-        function xoaSanPham(){
-            var child = document.getElementById('itemhang');
-            child.parentNode.removeChild(child);  
-        }
-        function onClickNutXoa(id) {
-            // Xóa node hiển thị
-            let nodeSanPham = event.target.parentElement;
-            nodeSanPham.parentElement.remove();
-            // Xóa data
-            let dataGioHang = layGioHangTuLCS("gioHang");
-            let vitri = dataGioHang.findIndex(sp => sp.idSanPham == id);
-            dataGioHang.splice(vitri, 1);
-            luuDanhSachItemGioHangVaoLCS(dataGioHang, "gioHang");
-            //tính tổng tiền
-            // Tính lại tổng tiền
-            // let nodeTongTien = document.getElementById("tongTien");
-            // nodeTongTien.innerHTML = themChamVaoSo(tinhThanhTien()) + " đ";            
-        }
-        // function tinhThanhTien(dataGioHang){
-        //     let dataSanPham = layGioHangTuLCS('danhSachSanPham');
-        //     let tongTien = 0;
-        //     for(var i=0; i < dataGioHang.length-1; i++){
-        //         let idSanPham = dataGioHang[i].id;
-        //         let soLuong = dataGioHang[i].soLuong;
-        //         let sanPham = dataSanPham.find(sp => sp.id == idSanPham);
-        //         let giaBan = tinhGiaBan();
-        //         tongTien += giaBan;
-        //     }
-        //     return tongTien;
-        //     console.log(tongTien);
-
-        // }
-    </script>
+    <script src="js/gioHang.js"></script> 
 </body>
 </html>

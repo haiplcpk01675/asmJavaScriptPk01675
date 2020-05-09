@@ -26,3 +26,20 @@ function nodeDangKy(){
     nodeDangNhap.style.display = 'none';
     nodeDangKy.style.display = 'flex';    
 }
+
+// Funciton hỗ trợ
+function layDataTuLocal(tenData) {
+    let data = JSON.parse(localStorage.getItem(tenData));
+
+    if (data == null)
+        data = new Array();
+    return data;
+}
+function luuDataLocal(data, tenData) {
+    localStorage.setItem(tenData, JSON.stringify(data));
+}
+
+function themChamVaoSo(so) {
+    var thayDoi = so.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ".");
+    return thayDoi;
+}

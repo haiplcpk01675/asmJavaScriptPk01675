@@ -118,7 +118,40 @@ img{
 .tamTinh{
     height: 50px;
     border-bottom: 1px solid #ccc;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
 }
+.tamthanhtoan{
+    font-size: 16px;
+    margin-right: 15px;
+}
+.tienPhaiTra{
+    height: 50px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+}
+.thanhtoanEnd{
+    color: #f53;
+    font-size: 18px;
+    font-weight: bold;
+    margin-right: 10px;
+}
+.nut-mua-tiep{
+    padding: 5px 10px 5px 10px;
+    height: 30px;
+    cursor: pointer;
+    background-color: rgb(243, 81, 49);
+    color: #fff;
+    z-index: 10;
+}
+.nut-mua-tiep:hover{
+    background-color: rgb(223, 75, 46);
+}
+
 .nd1_tt{
     line-height: 50px;
     margin-left: 5px;  
