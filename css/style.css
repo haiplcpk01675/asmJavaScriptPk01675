@@ -895,9 +895,10 @@ i.item-khuVuc-like-fill{
     margin-left: 167px;
     width: 40px;
     height: 40px;
-    background-color: rgba(255, 216, 64, 1);
+    background-color: rgba(255, 216, 64, 0.9);
     text-align: center;
     cursor: pointer;
+    border-top-right-radius: 4px;
 }
 .item .item-phanTramGiamGia::after{
     content: '';
@@ -906,7 +907,7 @@ i.item-khuVuc-like-fill{
     margin-left: -20px;
     border-width: 0 20px 6px;
     border-style: solid;
-    border-color: transparent rgba(255, 216, 64, 1) transparent rgba(255, 216, 64, 1);
+    border-color: transparent rgba(255, 216, 64, .7) transparent rgba(255, 216, 64, .7);
 }
 .giamGiaPhanTram{
     color: red;

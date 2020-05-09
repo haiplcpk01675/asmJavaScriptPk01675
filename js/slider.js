@@ -2,9 +2,26 @@
 var start = 0;
 var danhSachSliderItem = document.getElementsByName('slider-item');
 hienThiSliderHienTai(start);
-setInterval(() => {
-    onClickXemAnhSau()
-}, 6000);
+
+loadChamTron();
+
+setInterval(autoChuyenHinh,4000); // thời gian tính bằng milisecond, ví dụ : 1000 tương đương 1 giây
+function autoChuyenHinh(){
+    if(chayauto)
+    onClickXemAnhSau();
+}
+
+let chayauto = true;
+// them su kien hover
+let nodeSlider = document.getElementById('slider');
+
+nodeSlider.addEventListener('mouseover',()=>{
+    chayauto = !chayauto;
+});
+nodeSlider.addEventListener('mouseout',()=>{
+    chayauto = !chayauto;
+})
+
 function onClickXemAnhTruoc(){
     start--;
     if(start == -1){
@@ -26,4 +43,18 @@ function hienThiSliderHienTai(viTri){
         danhSachSliderItem[i].style.display = 'none';
     }
     danhSachSliderItem[viTri].style.display = 'block';
+}
+/** */
+
+function loadChamTron(){
+    let nodeCham = document.getElementById('khungChamTron');
+
+    for (let i = 0; i < danhSachSliderItem.length; i++) {
+        let nodeChamTron = document.createElement('div');
+        nodeChamTron.className = 'nut-cham-tron';
+        nodeChamTron.addEventListener('click',()=>{
+            hienThiSliderHienTai(i);
+        });
+        nodeCham.append(nodeChamTron);
+    }
 }

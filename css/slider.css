@@ -45,10 +45,12 @@ img{
 #btn-prev .fas{
     font-size: 30px;
     line-height: 30px;
+    opacity: .4;
 }
 #btn-next .fas{
     font-size: 30px;
     line-height: 30px;
+    opacity: .4;
 }
 #btn-next{
     position: absolute;
@@ -56,4 +58,27 @@ img{
     top: 50%;
     right: 1%;
     transform: translateY(-50%);
+}
+#khungChamTron{
+    width: 100%;
+    text-align: center;
+    position: absolute;
+    display: inline-flex;
+    flex-direction: row;
+    align-items: center;
+    margin-top: -20px;
+    margin-left: -50px;
+}
+.nut-cham-tron{
+    width: 15px;
+    height: 15px;
+    background-color: #ccc;
+    border-radius: 50%;
+    margin-left: 5px;
+    cursor: pointer;
+    opacity: .2;
+}
+.nut-cham-tron:hover{
+    background-color: #f53;
+    opacity: .5;
 }
