@@ -23,6 +23,7 @@ img{
     height: 100%;
     width: 100%;
     display: none;
+    cursor: pointer;
 }
 .nut-slider span{
     display: block;

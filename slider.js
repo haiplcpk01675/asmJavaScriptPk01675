@@ -2,9 +2,9 @@
 var start = 0;
 var danhSachSliderItem = document.getElementsByName('slider-item');
 hienThiSliderHienTai(start);
-// setInterval(() => {
-//     xemAnhSau()
-// }, 4000);
+setInterval(() => {
+    onClickXemAnhSau()
+}, 6000);
 function onClickXemAnhTruoc(){
     start--;
     if(start == -1){
